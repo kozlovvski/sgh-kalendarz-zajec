@@ -1,18 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
-import handleLoginFromLocalStorage from "./util/handleLoginFromLocalStorage";
+import UserContextProvider from "./components/AuthManager";
 
 const App = () => {
-  useEffect(handleLoginFromLocalStorage, []);
-
   return <Routes />;
 };
 
 const WrappedApp: React.FC = () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <UserContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </UserContextProvider>
 );
 
 export default WrappedApp;

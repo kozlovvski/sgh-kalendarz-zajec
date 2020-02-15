@@ -1,11 +1,44 @@
-import React from "react";
-import authManager, { url } from "../components/AuthManager";
-import handleUserLogout from "../util/handleUserLogout";
+import React, { useContext, useEffect } from "react";
+import { authManager, UserContext, AppUser } from "../components/AuthManager";
 import { google } from "googleapis";
+import loginUser from "../util/loginUser";
+import firebase from "firebase/app";
+import setCredentialsFromLocalStorage from "../util/setCredentialsFromLocalStorage";
+import logoutUser from "../util/logoutUser";
 
 interface Props {}
 
 const Index: React.FC<Props> = () => {
+  const { user, setUser } = useContext(UserContext);
+
+  const handleLogin = () => {
+    loginUser()
+      .then(res => {
+        console.log("logged in!");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  const handleLogout = () => {
+    logoutUser()
+      .then(() => {
+        console.log("logged out!");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(user => {
+      setUser(user);
+    });
+
+    setCredentialsFromLocalStorage();
+  }, []);
+
   const handleAddCalendar = async () => {
     const calendar = google.calendar({
       version: "v3",
@@ -36,16 +69,23 @@ const Index: React.FC<Props> = () => {
 
   return (
     <div>
-      {authManager.credentials.access_token ? (
+      Zalogowany: {user ? "tak" : "nie"};
+      {user ? (
         <button
           onClick={e => {
-            handleUserLogout();
+            handleLogout();
           }}
         >
-          Wyloguj
+          Wyloguj firebase
         </button>
       ) : (
-        <a href={url}>Zaloguj</a>
+        <button
+          onClick={e => {
+            handleLogin();
+          }}
+        >
+          Zaloguj firebase
+        </button>
       )}
       <button
         onClick={e => {
@@ -73,6 +113,13 @@ const Index: React.FC<Props> = () => {
         Show calendars
       </button>
       <button onClick={e => handleAddCalendar()}>Add calendar</button>
+      <button
+        onClick={e => {
+          console.log(firebase.auth().currentUser);
+        }}
+      >
+        Show firebase user
+      </button>
     </div>
   );
 };
