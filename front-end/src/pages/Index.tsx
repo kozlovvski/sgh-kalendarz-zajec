@@ -1,5 +1,6 @@
 import React from "react";
 import authManager, { url } from "../components/AuthManager";
+import handleUserLogout from "../util/handleUserLogout";
 import { google } from "googleapis";
 
 interface Props {}
@@ -35,7 +36,17 @@ const Index: React.FC<Props> = () => {
 
   return (
     <div>
-      <a href={url}>Zaloguj</a>
+      {authManager.credentials.access_token ? (
+        <button
+          onClick={e => {
+            handleUserLogout();
+          }}
+        >
+          Wyloguj
+        </button>
+      ) : (
+        <a href={url}>Zaloguj</a>
+      )}
       <button
         onClick={e => {
           console.log(authManager.credentials);
