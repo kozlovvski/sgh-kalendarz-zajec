@@ -24,3 +24,5 @@ yarn-error.log*
 
 google.config.ts
 firebase.config.ts
+
+.DS_Store

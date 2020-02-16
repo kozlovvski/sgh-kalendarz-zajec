@@ -1,9 +1,8 @@
 import React, { useEffect, useContext } from "react";
-import { BrowserRouter } from "react-router-dom";
-import Routes from "./routes";
 import firebase from "firebase/app";
 import UserContextProvider, { UserContext } from "./components/AuthManager";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
+import Index from "./views/Index";
 
 const App = () => {
   const { setUser } = useContext(UserContext);
@@ -19,14 +18,12 @@ const App = () => {
     setCredentialsFromLocalStorage();
   }, []);
 
-  return <Routes />;
+  return <Index />;
 };
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <App />
   </UserContextProvider>
 );
 
