@@ -8,6 +8,7 @@ import checkIfURLexistsInDatabase from "./util/checkIfURLexistsInDatabase";
 import inputNewDocuments from "./util/inputNewDocuments";
 import parseSheetObject from "./util/parseSheetObject";
 import removeDocumentsOfSameType from "./util/removeDocumentsOfSameType";
+import updateURLinDatabase from "./util/updateURLinDatabase";
 
 const serviceAccount = require("../../serviceAccountKey.json");
 
@@ -53,6 +54,7 @@ const readLeacturesFromXLS = functions.https.onCall(
 
               await removeDocumentsOfSameType(sheetName);
               await inputNewDocuments(entriesToSend);
+              await updateURLinDatabase(url, sheetName);
             } else {
             }
           });

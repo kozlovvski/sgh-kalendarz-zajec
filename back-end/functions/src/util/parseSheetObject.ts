@@ -2,8 +2,13 @@ import { SheetLecture, LecturesEntry } from "../../ownTypes";
 
 const parseSheetObject = (data: SheetLecture, type: string): LecturesEntry => {
   // see example objects in ../ownTypes.d.ts
-  const przedmiot_split = data.Przedmiot.split(/(?<=\d)\ (?=\w)/);
+  // const przedmiot_split = data.Przedmiot.split(/(?<=\d)\ (?=\w)/);
+  const przedmiot_split = data.Przedmiot.split(/(?<=\d)[\ -]+(?=[A-Za-z])/);
   const lecturer = data.Prowadzący.replace(/[-\d\s]{2,}/, "");
+
+  if (przedmiot_split.length !== 2) {
+    console.error(data.Przedmiot, przedmiot_split);
+  }
 
   const res = {
     signature: przedmiot_split[0],
