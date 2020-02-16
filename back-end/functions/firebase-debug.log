@@ -1,0 +1,243 @@
+[debug] [2020-02-16T22:46:00.260Z] ----------------------------------------------------------------------
+[debug] [2020-02-16T22:46:00.261Z] Command:       /usr/local/bin/firebase /Users/kozlovvski/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase functions:shell
+[debug] [2020-02-16T22:46:00.261Z] CLI Version:   7.13.0
+[debug] [2020-02-16T22:46:00.261Z] Platform:      darwin
+[debug] [2020-02-16T22:46:00.262Z] Node Version:  v12.13.1
+[debug] [2020-02-16T22:46:00.264Z] Time:          Sun Feb 16 2020 23:46:00 GMT+0100 (GMT+01:00)
+[debug] [2020-02-16T22:46:00.264Z] ----------------------------------------------------------------------
+[debug] [2020-02-16T22:46:00.264Z] 
+[debug] [2020-02-16T22:46:00.274Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-16T22:46:00.275Z] > authorizing via signed-in user
+[debug] [2020-02-16T22:46:00.275Z] [iam] checking project sgh-kalendarz-zajec for permissions ["firebase.projects.get"]
+[debug] [2020-02-16T22:46:00.276Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-16T22:46:00.276Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-16T22:46:00.489Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-16T22:46:00.632Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/sgh-kalendarz-zajec:testIamPermissions  
+
+[debug] [2020-02-16T22:46:01.687Z] <<< HTTP RESPONSE 200
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[debug] [2020-02-16T22:46:01.723Z] [functions] Watching "/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions" for Cloud Functions...
+[debug] [2020-02-16T22:46:01.732Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:46:01.732Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-16T22:46:01.732Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:46:01.732Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9345.sock
+[debug] [2020-02-16T22:46:01.733Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: BUSY
+[debug] [2020-02-16T22:46:02.037Z] DEBUG: [runtime-status] [9345] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:46:02.038Z] DEBUG: [runtime-status] [9345] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:46:02.042Z] DEBUG: [runtime-status] [9345] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:46:02.043Z] DEBUG: [runtime-status] [9345] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:46:02.044Z] DEBUG: [runtime-status] [9345] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:46:02.929Z] [functions[helloWorld]] http function initialized (http://localhost:5000/sgh-kalendarz-zajec/us-central1/helloWorld).
+[debug] [2020-02-16T22:46:02.929Z] [functions[readLecturesfromXLS]] http function initialized (http://localhost:5000/sgh-kalendarz-zajec/us-central1/readLecturesfromXLS).
+[info] i  functions: Loaded functions: helloWorld, readLecturesfromXLS
+[debug] [2020-02-16T22:46:02.938Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: IDLE
+[debug] [2020-02-16T22:47:01.468Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-16T22:47:01.468Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-16T22:47:01.468Z] Accepted request POST /sgh-kalendarz-zajec/us-central1/readLecturesfromXLS --> readLecturesfromXLS
+[debug] [2020-02-16T22:47:01.473Z] DEBUG: [worker-pool] addWorker(readLecturesfromXLS)
+[debug] [2020-02-16T22:47:01.473Z] DEBUG: [worker-pool] Adding worker with key readLecturesfromXLS, total=1
+[debug] [2020-02-16T22:47:01.474Z] DEBUG: [worker-pool] submitWork(triggerId=readLecturesfromXLS)
+[debug] [2020-02-16T22:47:01.474Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9376.sock
+[debug] [2020-02-16T22:47:01.474Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: BUSY
+[debug] [2020-02-16T22:47:01.988Z] DEBUG: [runtime-status] [9376] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:47:01.988Z] DEBUG: [runtime-status] [9376] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:47:01.991Z] DEBUG: [runtime-status] [9376] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:47:01.992Z] DEBUG: [runtime-status] [9376] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:47:01.993Z] DEBUG: [runtime-status] [9376] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:47:02.742Z] DEBUG: [runtime-status] [9376] Trigger "readLecturesfromXLS" has been found, beginning invocation!
+[debug] [2020-02-16T22:47:02.742Z] [functions] Beginning execution of "readLecturesfromXLS"
+[debug] [2020-02-16T22:47:02.742Z] DEBUG: [runtime-status] [9376] triggerDefinition {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"readLecturesfromXLS","entryPoint":"readLecturesfromXLS"}
+[debug] [2020-02-16T22:47:02.742Z] DEBUG: [runtime-status] [9376] Running readLecturesfromXLS in mode HTTPS
+[debug] [2020-02-16T22:47:02.746Z] DEBUG: [runtime-status] [9376] Attempting to listen to socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9376.sock
+[debug] [2020-02-16T22:47:02.749Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-02-16T22:47:02.779Z] DEBUG: [runtime-status] [9376] Ephemeral server handling POST request
+[debug] [2020-02-16T22:47:03.494Z] DEBUG: [runtime-status] [9376] Ephemeral server survived.
+[debug] [2020-02-16T22:47:09.251Z] [functions] Finished "readLecturesfromXLS" in ~1s
+[debug] [2020-02-16T22:47:09.251Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: IDLE
+[debug] [2020-02-16T22:47:09.252Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-16T22:50:19.829Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T22:50:20.438Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T22:50:20.438Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T22:50:21.439Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T22:50:21.440Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: FINISHING
+[debug] [2020-02-16T22:50:21.440Z] DEBUG: [worker-pool] Shutting down IDLE worker (readLecturesfromXLS)
+[debug] [2020-02-16T22:50:21.440Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: FINISHING
+[debug] [2020-02-16T22:50:21.460Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:50:21.460Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T22:50:21.460Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:50:21.462Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9398.sock
+[debug] [2020-02-16T22:50:21.462Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: BUSY
+[debug] [2020-02-16T22:50:21.464Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: exited
+[debug] [2020-02-16T22:50:21.465Z] DEBUG: [worker-~diagnostic~-f36cf2b7-7666-4526-a97a-c9a0219e023a]: FINISHED
+[debug] [2020-02-16T22:50:21.465Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: exited
+[debug] [2020-02-16T22:50:21.465Z] DEBUG: [worker-readLecturesfromXLS-e1a5b40c-5085-4d67-9225-e268d60bc90a]: FINISHED
+[debug] [2020-02-16T22:50:21.918Z] DEBUG: [runtime-status] [9398] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:50:21.920Z] DEBUG: [runtime-status] [9398] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:50:21.924Z] DEBUG: [runtime-status] [9398] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:50:21.925Z] DEBUG: [runtime-status] [9398] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:21.926Z] DEBUG: [runtime-status] [9398] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:22.750Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: IDLE
+[debug] [2020-02-16T22:50:25.860Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T22:50:26.476Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T22:50:26.477Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T22:50:27.477Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T22:50:27.477Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: FINISHING
+[debug] [2020-02-16T22:50:27.478Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T22:50:27.480Z] DEBUG: [worker-pool] Cleaned up workers for readLecturesfromXLS: 1 --> 0
+[debug] [2020-02-16T22:50:27.486Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:50:27.487Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T22:50:27.487Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:50:27.487Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9407.sock
+[debug] [2020-02-16T22:50:27.487Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: BUSY
+[debug] [2020-02-16T22:50:27.489Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: exited
+[debug] [2020-02-16T22:50:27.490Z] DEBUG: [worker-~diagnostic~-6c948cb9-2cad-408d-8182-544150a32081]: FINISHED
+[debug] [2020-02-16T22:50:27.772Z] DEBUG: [runtime-status] [9407] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:50:27.773Z] DEBUG: [runtime-status] [9407] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:50:27.775Z] DEBUG: [runtime-status] [9407] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:50:27.775Z] DEBUG: [runtime-status] [9407] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:27.776Z] DEBUG: [runtime-status] [9407] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:28.227Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: IDLE
+[debug] [2020-02-16T22:50:34.765Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T22:50:35.278Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T22:50:35.279Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T22:50:36.282Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T22:50:36.282Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: FINISHING
+[debug] [2020-02-16T22:50:36.282Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T22:50:36.292Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:50:36.292Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T22:50:36.292Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:50:36.292Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9416.sock
+[debug] [2020-02-16T22:50:36.292Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: BUSY
+[debug] [2020-02-16T22:50:36.294Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: exited
+[debug] [2020-02-16T22:50:36.294Z] DEBUG: [worker-~diagnostic~-49948de1-0dfe-4d32-94e1-1d186bf0e483]: FINISHED
+[debug] [2020-02-16T22:50:36.548Z] DEBUG: [runtime-status] [9416] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:50:36.548Z] DEBUG: [runtime-status] [9416] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:50:36.548Z] DEBUG: [runtime-status] [9416] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:50:36.549Z] DEBUG: [runtime-status] [9416] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:36.550Z] DEBUG: [runtime-status] [9416] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:36.699Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-16T22:50:36.699Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-16T22:50:36.699Z] Accepted request POST /sgh-kalendarz-zajec/us-central1/readLecturesfromXLS --> readLecturesfromXLS
+[debug] [2020-02-16T22:50:36.700Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T22:50:36.712Z] DEBUG: [worker-pool] addWorker(readLecturesfromXLS)
+[debug] [2020-02-16T22:50:36.712Z] DEBUG: [worker-pool] Adding worker with key readLecturesfromXLS, total=1
+[debug] [2020-02-16T22:50:36.713Z] DEBUG: [worker-pool] submitWork(triggerId=readLecturesfromXLS)
+[debug] [2020-02-16T22:50:36.713Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9425.sock
+[debug] [2020-02-16T22:50:36.713Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: BUSY
+[debug] [2020-02-16T22:50:37.028Z] DEBUG: [runtime-status] [9425] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:50:37.029Z] DEBUG: [runtime-status] [9425] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:50:37.031Z] DEBUG: [runtime-status] [9425] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:50:37.032Z] DEBUG: [runtime-status] [9425] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:37.033Z] DEBUG: [runtime-status] [9425] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:50:37.047Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: IDLE
+[debug] [2020-02-16T22:50:37.419Z] DEBUG: [runtime-status] [9425] Trigger "readLecturesfromXLS" has been found, beginning invocation!
+[debug] [2020-02-16T22:50:37.419Z] [functions] Beginning execution of "readLecturesfromXLS"
+[debug] [2020-02-16T22:50:37.419Z] DEBUG: [runtime-status] [9425] triggerDefinition {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"readLecturesfromXLS","entryPoint":"readLecturesfromXLS"}
+[debug] [2020-02-16T22:50:37.419Z] DEBUG: [runtime-status] [9425] Running readLecturesfromXLS in mode HTTPS
+[debug] [2020-02-16T22:50:37.422Z] DEBUG: [runtime-status] [9425] Attempting to listen to socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9425.sock
+[debug] [2020-02-16T22:50:37.429Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-02-16T22:50:37.460Z] DEBUG: [runtime-status] [9425] Ephemeral server handling POST request
+[debug] [2020-02-16T22:50:37.965Z] DEBUG: [runtime-status] [9425] Ephemeral server survived.
+[info] >  <Buffer d0 cf 11 e0 a1 b1 1a e1 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3e 00 03 00 fe ff 09 00 06 00 00 00 00 00 00 00 00 00 00 00 08 00 00 00 01 00 ... 477646 more bytes>
+[debug] [2020-02-16T22:50:38.580Z] [functions] Finished "readLecturesfromXLS" in ~1s
+[debug] [2020-02-16T22:50:38.580Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: IDLE
+[debug] [2020-02-16T22:50:38.580Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-16T22:51:53.933Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T22:51:54.450Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T22:51:54.451Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T22:51:55.455Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T22:51:55.455Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: FINISHING
+[debug] [2020-02-16T22:51:55.456Z] DEBUG: [worker-pool] Shutting down IDLE worker (readLecturesfromXLS)
+[debug] [2020-02-16T22:51:55.456Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: FINISHING
+[debug] [2020-02-16T22:51:55.473Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:51:55.473Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T22:51:55.474Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:51:55.474Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9431.sock
+[debug] [2020-02-16T22:51:55.474Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: BUSY
+[debug] [2020-02-16T22:51:55.475Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: exited
+[debug] [2020-02-16T22:51:55.475Z] DEBUG: [worker-~diagnostic~-d9b4bede-5135-471d-8576-65929c9157d1]: FINISHED
+[debug] [2020-02-16T22:51:55.475Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: exited
+[debug] [2020-02-16T22:51:55.475Z] DEBUG: [worker-readLecturesfromXLS-5efe32a5-a4f1-45e4-b115-74b9d4fccb37]: FINISHED
+[debug] [2020-02-16T22:51:56.022Z] DEBUG: [runtime-status] [9431] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:51:56.023Z] DEBUG: [runtime-status] [9431] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:51:56.026Z] DEBUG: [runtime-status] [9431] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:51:56.027Z] DEBUG: [runtime-status] [9431] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:51:56.027Z] DEBUG: [runtime-status] [9431] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:51:56.783Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: IDLE
+[debug] [2020-02-16T22:51:57.002Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-16T22:51:57.002Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-16T22:51:57.002Z] Accepted request POST /sgh-kalendarz-zajec/us-central1/readLecturesfromXLS --> readLecturesfromXLS
+[debug] [2020-02-16T22:51:57.002Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T22:51:57.002Z] DEBUG: [worker-pool] Cleaned up workers for readLecturesfromXLS: 1 --> 0
+[debug] [2020-02-16T22:51:57.007Z] DEBUG: [worker-pool] addWorker(readLecturesfromXLS)
+[debug] [2020-02-16T22:51:57.007Z] DEBUG: [worker-pool] Adding worker with key readLecturesfromXLS, total=1
+[debug] [2020-02-16T22:51:57.007Z] DEBUG: [worker-pool] submitWork(triggerId=readLecturesfromXLS)
+[debug] [2020-02-16T22:51:57.007Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9439.sock
+[debug] [2020-02-16T22:51:57.009Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: BUSY
+[debug] [2020-02-16T22:51:57.252Z] DEBUG: [runtime-status] [9439] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:51:57.252Z] DEBUG: [runtime-status] [9439] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:51:57.252Z] DEBUG: [runtime-status] [9439] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:51:57.253Z] DEBUG: [runtime-status] [9439] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:51:57.254Z] DEBUG: [runtime-status] [9439] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:51:57.631Z] DEBUG: [runtime-status] [9439] Trigger "readLecturesfromXLS" has been found, beginning invocation!
+[debug] [2020-02-16T22:51:57.631Z] [functions] Beginning execution of "readLecturesfromXLS"
+[debug] [2020-02-16T22:51:57.631Z] DEBUG: [runtime-status] [9439] triggerDefinition {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"readLecturesfromXLS","entryPoint":"readLecturesfromXLS"}
+[debug] [2020-02-16T22:51:57.632Z] DEBUG: [runtime-status] [9439] Running readLecturesfromXLS in mode HTTPS
+[debug] [2020-02-16T22:51:57.634Z] DEBUG: [runtime-status] [9439] Attempting to listen to socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9439.sock
+[debug] [2020-02-16T22:51:57.645Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-02-16T22:51:57.682Z] DEBUG: [runtime-status] [9439] Ephemeral server handling POST request
+[debug] [2020-02-16T22:51:58.201Z] DEBUG: [runtime-status] [9439] Ephemeral server survived.
+[info] >  [ 'SLLD', 'NLLS' ]
+[debug] [2020-02-16T22:51:58.902Z] [functions] Finished "readLecturesfromXLS" in ~1s
+[debug] [2020-02-16T22:51:58.902Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: IDLE
+[debug] [2020-02-16T22:51:58.902Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-16T22:55:55.918Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T22:55:56.434Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T22:55:56.435Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T22:55:57.440Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T22:55:57.440Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: FINISHING
+[debug] [2020-02-16T22:55:57.440Z] DEBUG: [worker-pool] Shutting down IDLE worker (readLecturesfromXLS)
+[debug] [2020-02-16T22:55:57.441Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: FINISHING
+[debug] [2020-02-16T22:55:57.459Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T22:55:57.459Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T22:55:57.459Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T22:55:57.459Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9453.sock
+[debug] [2020-02-16T22:55:57.459Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: BUSY
+[debug] [2020-02-16T22:55:57.461Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: exited
+[debug] [2020-02-16T22:55:57.461Z] DEBUG: [worker-~diagnostic~-941dfcd9-0827-44ec-b59e-242ede3fbd7d]: FINISHED
+[debug] [2020-02-16T22:55:57.461Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: exited
+[debug] [2020-02-16T22:55:57.461Z] DEBUG: [worker-readLecturesfromXLS-e878dce6-a565-4fc9-b1e9-2e6f6f262dbd]: FINISHED
+[debug] [2020-02-16T22:55:58.023Z] DEBUG: [runtime-status] [9453] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:55:58.024Z] DEBUG: [runtime-status] [9453] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:55:58.028Z] DEBUG: [runtime-status] [9453] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:55:58.030Z] DEBUG: [runtime-status] [9453] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:55:58.030Z] DEBUG: [runtime-status] [9453] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:55:58.818Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: IDLE
+[debug] [2020-02-16T22:56:01.947Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-02-16T22:56:01.947Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-02-16T22:56:01.947Z] Accepted request POST /sgh-kalendarz-zajec/us-central1/readLecturesfromXLS --> readLecturesfromXLS
+[debug] [2020-02-16T22:56:01.948Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T22:56:01.948Z] DEBUG: [worker-pool] Cleaned up workers for readLecturesfromXLS: 1 --> 0
+[debug] [2020-02-16T22:56:01.952Z] DEBUG: [worker-pool] addWorker(readLecturesfromXLS)
+[debug] [2020-02-16T22:56:01.953Z] DEBUG: [worker-pool] Adding worker with key readLecturesfromXLS, total=1
+[debug] [2020-02-16T22:56:01.953Z] DEBUG: [worker-pool] submitWork(triggerId=readLecturesfromXLS)
+[debug] [2020-02-16T22:56:01.953Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9462.sock
+[debug] [2020-02-16T22:56:01.953Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: BUSY
+[debug] [2020-02-16T22:56:02.209Z] DEBUG: [runtime-status] [9462] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T22:56:02.211Z] DEBUG: [runtime-status] [9462] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T22:56:02.211Z] DEBUG: [runtime-status] [9462] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T22:56:02.212Z] DEBUG: [runtime-status] [9462] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:56:02.213Z] DEBUG: [runtime-status] [9462] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T22:56:02.588Z] DEBUG: [runtime-status] [9462] Trigger "readLecturesfromXLS" has been found, beginning invocation!
+[debug] [2020-02-16T22:56:02.588Z] [functions] Beginning execution of "readLecturesfromXLS"
+[debug] [2020-02-16T22:56:02.588Z] DEBUG: [runtime-status] [9462] triggerDefinition {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"readLecturesfromXLS","entryPoint":"readLecturesfromXLS"}
+[debug] [2020-02-16T22:56:02.588Z] DEBUG: [runtime-status] [9462] Running readLecturesfromXLS in mode HTTPS
+[debug] [2020-02-16T22:56:02.591Z] DEBUG: [runtime-status] [9462] Attempting to listen to socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_9462.sock
+[debug] [2020-02-16T22:56:02.598Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-02-16T22:56:02.627Z] DEBUG: [runtime-status] [9462] Ephemeral server handling POST request
+[debug] [2020-02-16T22:56:03.142Z] DEBUG: [runtime-status] [9462] Ephemeral server survived.
+[debug] [2020-02-16T22:56:03.858Z] [functions] Finished "readLecturesfromXLS" in ~1s
+[debug] [2020-02-16T22:56:03.858Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: IDLE
+[debug] [2020-02-16T22:56:03.859Z] [work-queue] {"queueLength":0,"workRunningCount":0}
