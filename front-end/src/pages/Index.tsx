@@ -31,17 +31,6 @@ const Index: React.FC<Props> = () => {
       });
   };
 
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
-      // TODO: check how to update googleapis tokens if they expired.
-      // Probably will need to change GoogleAuthProvider to signing in with credentials
-      // https://stackoverflow.com/questions/49929134/how-to-get-refresh-token-for-google-api-using-firebase-authentication
-      setUser(user);
-    });
-
-    setCredentialsFromLocalStorage();
-  }, []);
-
   const handleAddCalendar = async () => {
     const calendar = google.calendar({
       version: "v3",
@@ -122,6 +111,19 @@ const Index: React.FC<Props> = () => {
         }}
       >
         Show firebase user
+      </button>
+      <button
+        onClick={e => {
+          firebase
+            .firestore()
+            .collection("lectures")
+            .get()
+            .then(snapshot => {
+              console.log(snapshot.docs.map(doc => doc.data()));
+            });
+        }}
+      >
+        Show lectures
       </button>
     </div>
   );
