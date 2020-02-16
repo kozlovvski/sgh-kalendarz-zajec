@@ -9,8 +9,9 @@ const loginUser = async () => {
 
   const credentials = result.credential as firebase.auth.OAuthCredential;
 
-  localStorage.setItem("access_token", credentials.accessToken!);
-  localStorage.setItem("id_token", credentials.idToken!);
+  credentials.accessToken &&
+    localStorage.setItem("access_token", credentials.accessToken);
+  credentials.idToken && localStorage.setItem("id_token", credentials.idToken);
 
   result.credential &&
     authManager.setCredentials({
