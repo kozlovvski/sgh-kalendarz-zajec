@@ -241,3 +241,214 @@
 [debug] [2020-02-16T22:56:03.858Z] [functions] Finished "readLecturesfromXLS" in ~1s
 [debug] [2020-02-16T22:56:03.858Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: IDLE
 [debug] [2020-02-16T22:56:03.859Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-02-16T23:00:16.399Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T23:00:16.805Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T23:00:16.805Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T23:00:17.809Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:00:17.809Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: FINISHING
+[debug] [2020-02-16T23:00:17.809Z] DEBUG: [worker-pool] Shutting down IDLE worker (readLecturesfromXLS)
+[debug] [2020-02-16T23:00:17.809Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: FINISHING
+[debug] [2020-02-16T23:00:17.823Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:00:17.824Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:00:17.824Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:00:17.824Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10008.sock
+[debug] [2020-02-16T23:00:17.824Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: BUSY
+[debug] [2020-02-16T23:00:17.825Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: exited
+[debug] [2020-02-16T23:00:17.825Z] DEBUG: [worker-~diagnostic~-907e710e-1bd0-47de-b868-976279c4e846]: FINISHED
+[debug] [2020-02-16T23:00:17.827Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: exited
+[debug] [2020-02-16T23:00:17.827Z] DEBUG: [worker-readLecturesfromXLS-dab00381-297c-4035-9989-db22c3a169df]: FINISHED
+[debug] [2020-02-16T23:00:18.378Z] DEBUG: [runtime-status] [10008] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:00:18.380Z] DEBUG: [runtime-status] [10008] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:00:18.392Z] DEBUG: [runtime-status] [10008] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:00:18.394Z] DEBUG: [runtime-status] [10008] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:00:18.395Z] DEBUG: [runtime-status] [10008] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:00:19.162Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: IDLE
+[debug] [2020-02-16T23:00:58.615Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/parseObject.ts changed, reloading triggers
+[debug] [2020-02-16T23:00:58.920Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseObject.js.map changed, reloading triggers
+[debug] [2020-02-16T23:00:59.023Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseObject.js changed, reloading triggers
+[debug] [2020-02-16T23:01:00.026Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:01:00.026Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: FINISHING
+[debug] [2020-02-16T23:01:00.026Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:01:00.026Z] DEBUG: [worker-pool] Cleaned up workers for readLecturesfromXLS: 1 --> 0
+[debug] [2020-02-16T23:01:00.033Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:01:00.033Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:01:00.033Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:01:00.033Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10042.sock
+[debug] [2020-02-16T23:01:00.033Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: BUSY
+[debug] [2020-02-16T23:01:00.039Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: exited
+[debug] [2020-02-16T23:01:00.039Z] DEBUG: [worker-~diagnostic~-0a88a197-987f-4ca5-ad6a-ea3e6f552515]: FINISHED
+[debug] [2020-02-16T23:01:00.044Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/parseObject.ts changed, reloading triggers
+[debug] [2020-02-16T23:01:00.448Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseObject.js.map changed, reloading triggers
+[debug] [2020-02-16T23:01:00.450Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseObject.js changed, reloading triggers
+[debug] [2020-02-16T23:01:00.584Z] DEBUG: [runtime-status] [10042] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:01:00.585Z] DEBUG: [runtime-status] [10042] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:01:00.587Z] DEBUG: [runtime-status] [10042] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:01:00.589Z] DEBUG: [runtime-status] [10042] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:00.590Z] DEBUG: [runtime-status] [10042] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:01.319Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: IDLE
+[debug] [2020-02-16T23:01:01.453Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:01:01.454Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: FINISHING
+[debug] [2020-02-16T23:01:01.454Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:01:01.463Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:01:01.463Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:01:01.463Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:01:01.463Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10051.sock
+[debug] [2020-02-16T23:01:01.463Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: BUSY
+[debug] [2020-02-16T23:01:01.467Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: exited
+[debug] [2020-02-16T23:01:01.467Z] DEBUG: [worker-~diagnostic~-2ffd9ec7-fc96-4289-8fb5-c69ef7c27d1b]: FINISHED
+[debug] [2020-02-16T23:01:01.818Z] DEBUG: [runtime-status] [10051] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:01:01.819Z] DEBUG: [runtime-status] [10051] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:01:01.821Z] DEBUG: [runtime-status] [10051] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:01:01.821Z] DEBUG: [runtime-status] [10051] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:01.822Z] DEBUG: [runtime-status] [10051] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:02.219Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: IDLE
+[debug] [2020-02-16T23:01:07.108Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/parseObject.ts changed, reloading triggers
+[debug] [2020-02-16T23:01:08.109Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:01:08.109Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: FINISHING
+[debug] [2020-02-16T23:01:08.109Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:01:08.116Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:01:08.117Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:01:08.117Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:01:08.117Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10060.sock
+[debug] [2020-02-16T23:01:08.117Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: BUSY
+[debug] [2020-02-16T23:01:08.125Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: exited
+[debug] [2020-02-16T23:01:08.125Z] DEBUG: [worker-~diagnostic~-148b0302-56b5-40fe-86aa-e24c3d1d68c5]: FINISHED
+[debug] [2020-02-16T23:01:08.415Z] DEBUG: [runtime-status] [10060] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:01:08.418Z] DEBUG: [runtime-status] [10060] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:01:08.420Z] DEBUG: [runtime-status] [10060] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:01:08.421Z] DEBUG: [runtime-status] [10060] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:08.422Z] DEBUG: [runtime-status] [10060] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:09.330Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: IDLE
+[debug] [2020-02-16T23:01:45.353Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/parseSheetObject.ts changed, reloading triggers
+[debug] [2020-02-16T23:01:45.768Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseSheetObject.js changed, reloading triggers
+[debug] [2020-02-16T23:01:45.769Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/parseSheetObject.js.map changed, reloading triggers
+[debug] [2020-02-16T23:01:46.770Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:01:46.770Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: FINISHING
+[debug] [2020-02-16T23:01:46.770Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:01:46.778Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:01:46.778Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:01:46.778Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:01:46.778Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10089.sock
+[debug] [2020-02-16T23:01:46.778Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: BUSY
+[debug] [2020-02-16T23:01:46.783Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: exited
+[debug] [2020-02-16T23:01:46.783Z] DEBUG: [worker-~diagnostic~-436f855b-fbc1-4167-bb35-fc416bd273a8]: FINISHED
+[debug] [2020-02-16T23:01:47.265Z] DEBUG: [runtime-status] [10089] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:01:47.267Z] DEBUG: [runtime-status] [10089] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:01:47.270Z] DEBUG: [runtime-status] [10089] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:01:47.272Z] DEBUG: [runtime-status] [10089] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:47.272Z] DEBUG: [runtime-status] [10089] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:01:47.999Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: IDLE
+[debug] [2020-02-16T23:02:14.090Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/checkIfURLexistsInDatabase.ts changed, reloading triggers
+[debug] [2020-02-16T23:02:14.404Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/checkIfURLexistsInDatabase.js changed, reloading triggers
+[debug] [2020-02-16T23:02:14.404Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/checkIfURLexistsInDatabase.js.map changed, reloading triggers
+[debug] [2020-02-16T23:02:15.409Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:02:15.409Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: FINISHING
+[debug] [2020-02-16T23:02:15.409Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:02:15.422Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:02:15.422Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:02:15.422Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:02:15.422Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10119.sock
+[debug] [2020-02-16T23:02:15.422Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: BUSY
+[debug] [2020-02-16T23:02:15.423Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: exited
+[debug] [2020-02-16T23:02:15.423Z] DEBUG: [worker-~diagnostic~-07f7cb97-90aa-4a9b-a31d-ced0e31ffcc2]: FINISHED
+[debug] [2020-02-16T23:02:15.852Z] DEBUG: [runtime-status] [10119] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:02:15.852Z] DEBUG: [runtime-status] [10119] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:02:15.853Z] DEBUG: [runtime-status] [10119] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:02:15.853Z] DEBUG: [runtime-status] [10119] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:02:15.854Z] DEBUG: [runtime-status] [10119] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:02:16.507Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: IDLE
+[debug] [2020-02-16T23:03:26.139Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/removeDocumentsOfSameType.ts changed, reloading triggers
+[debug] [2020-02-16T23:03:26.660Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/removeDocumentsOfSameType.js changed, reloading triggers
+[debug] [2020-02-16T23:03:26.661Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/removeDocumentsOfSameType.js.map changed, reloading triggers
+[debug] [2020-02-16T23:03:27.662Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:03:27.662Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: FINISHING
+[debug] [2020-02-16T23:03:27.663Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:03:27.667Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:03:27.667Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:03:27.667Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:03:27.668Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10156.sock
+[debug] [2020-02-16T23:03:27.668Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: BUSY
+[debug] [2020-02-16T23:03:27.674Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: exited
+[debug] [2020-02-16T23:03:27.674Z] DEBUG: [worker-~diagnostic~-30fd0780-f0a6-4a31-8ae3-4a66f5041558]: FINISHED
+[debug] [2020-02-16T23:03:28.197Z] DEBUG: [runtime-status] [10156] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:03:28.200Z] DEBUG: [runtime-status] [10156] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:03:28.202Z] DEBUG: [runtime-status] [10156] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:03:28.204Z] DEBUG: [runtime-status] [10156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:28.207Z] DEBUG: [runtime-status] [10156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:28.977Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: IDLE
+[debug] [2020-02-16T23:03:37.617Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T23:03:38.231Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T23:03:38.231Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T23:03:39.236Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:03:39.236Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: FINISHING
+[debug] [2020-02-16T23:03:39.236Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:03:39.242Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:03:39.243Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:03:39.243Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:03:39.243Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10189.sock
+[debug] [2020-02-16T23:03:39.243Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: BUSY
+[debug] [2020-02-16T23:03:39.251Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: exited
+[debug] [2020-02-16T23:03:39.251Z] DEBUG: [worker-~diagnostic~-886f5b29-6d7f-41cf-967f-01133ffdba63]: FINISHED
+[debug] [2020-02-16T23:03:39.631Z] DEBUG: [runtime-status] [10189] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:03:39.633Z] DEBUG: [runtime-status] [10189] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:03:39.634Z] DEBUG: [runtime-status] [10189] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:03:39.636Z] DEBUG: [runtime-status] [10189] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:39.637Z] DEBUG: [runtime-status] [10189] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:40.127Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: IDLE
+[debug] [2020-02-16T23:03:51.292Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/util/inputNewDocuments.ts changed, reloading triggers
+[debug] [2020-02-16T23:03:51.701Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/inputNewDocuments.js changed, reloading triggers
+[debug] [2020-02-16T23:03:51.701Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/util/inputNewDocuments.js.map changed, reloading triggers
+[debug] [2020-02-16T23:03:52.704Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:03:52.705Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: FINISHING
+[debug] [2020-02-16T23:03:52.705Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:03:52.716Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:03:52.716Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:03:52.716Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:03:52.716Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10201.sock
+[debug] [2020-02-16T23:03:52.716Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: BUSY
+[debug] [2020-02-16T23:03:52.717Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: exited
+[debug] [2020-02-16T23:03:52.717Z] DEBUG: [worker-~diagnostic~-a2fe96f3-77e7-4078-8d3c-1e0f838c40ad]: FINISHED
+[debug] [2020-02-16T23:03:53.013Z] DEBUG: [runtime-status] [10201] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:03:53.015Z] DEBUG: [runtime-status] [10201] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:03:53.016Z] DEBUG: [runtime-status] [10201] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:03:53.017Z] DEBUG: [runtime-status] [10201] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:53.018Z] DEBUG: [runtime-status] [10201] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:03:53.421Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: IDLE
+[debug] [2020-02-16T23:04:10.515Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T23:04:11.038Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T23:04:11.039Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T23:04:12.043Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:04:12.046Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: FINISHING
+[debug] [2020-02-16T23:04:12.047Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:04:12.070Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:04:12.071Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:04:12.071Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:04:12.071Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10214.sock
+[debug] [2020-02-16T23:04:12.071Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: BUSY
+[debug] [2020-02-16T23:04:12.073Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: exited
+[debug] [2020-02-16T23:04:12.073Z] DEBUG: [worker-~diagnostic~-b77e6d01-dbee-42ce-94d5-f838e7b25443]: FINISHED
+[debug] [2020-02-16T23:04:12.713Z] DEBUG: [runtime-status] [10214] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:04:12.714Z] DEBUG: [runtime-status] [10214] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:04:12.718Z] DEBUG: [runtime-status] [10214] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:04:12.719Z] DEBUG: [runtime-status] [10214] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:04:12.719Z] DEBUG: [runtime-status] [10214] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:04:13.631Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: IDLE
+[debug] [2020-02-16T23:04:17.537Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/src/readLecturesFromXLS.ts changed, reloading triggers
+[debug] [2020-02-16T23:04:17.949Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js.map changed, reloading triggers
+[debug] [2020-02-16T23:04:17.949Z] DEBUG: File /Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/lib/readLecturesFromXLS.js changed, reloading triggers
+[debug] [2020-02-16T23:04:18.950Z] DEBUG: [worker-pool] Shutting down IDLE worker (~diagnostic~)
+[debug] [2020-02-16T23:04:18.951Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: FINISHING
+[debug] [2020-02-16T23:04:18.951Z] DEBUG: [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1
+[debug] [2020-02-16T23:04:18.957Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-16T23:04:18.957Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=2
+[debug] [2020-02-16T23:04:18.957Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-16T23:04:18.957Z] DEBUG: [worker-~diagnostic~-10917fa3-b6c7-4581-9a55-347391c4fff8]: Assigning socketPath: /var/folders/9z/n7t6j1qd5h7gjv_dyx87f7540000gn/T/fire_emu_10226.sock
+[debug] [2020-02-16T23:04:18.957Z] DEBUG: [worker-~diagnostic~-10917fa3-b6c7-4581-9a55-347391c4fff8]: BUSY
+[debug] [2020-02-16T23:04:18.966Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: exited
+[debug] [2020-02-16T23:04:18.966Z] DEBUG: [worker-~diagnostic~-bc82dfde-6259-43fb-bbec-c2b7209b40a9]: FINISHED
+[debug] [2020-02-16T23:04:19.290Z] DEBUG: [runtime-status] [10226] Functions runtime initialized. {"cwd":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions","node_version":"12.13.1"}
+[debug] [2020-02-16T23:04:19.292Z] DEBUG: [runtime-status] [10226] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-16T23:04:19.294Z] DEBUG: [runtime-status] [10226] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-02-16T23:04:19.295Z] DEBUG: [runtime-status] [10226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:04:19.295Z] DEBUG: [runtime-status] [10226] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/kozlovvski/Desktop/sgh-kalendarz-zajec/back-end/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-02-16T23:04:19.769Z] DEBUG: [worker-~diagnostic~-10917fa3-b6c7-4581-9a55-347391c4fff8]: IDLE
