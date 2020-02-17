@@ -12,9 +12,9 @@ const CopySignatures: React.FC<Props> = () => {
     <div className="wrapper">
       <Title>1. Skopiuj sygnatury</Title>
       <Typography.Paragraph>
-        Skopiuj listę swoich przedmiotów z Wirtualnego Dziekanatu. Możesz na
-        przykład zaznaczyć tabelkę i ją skopiować, ale jakakolwiek lista
-        zawierająca sygnatury będzie w porządku.
+        Skopiuj listę swoich przedmiotów z Wirtualnego Dziekanatu. Po prostu
+        zaznacz tabelkę jak zwykły tekst. Upewnij się, czy wszystkie sygnatury i
+        numery grup są zaznaczone.
       </Typography.Paragraph>
       <Button
         icon="link"

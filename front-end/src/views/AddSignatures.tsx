@@ -41,12 +41,13 @@ const AddSignatures: React.FC<Props> = () => {
       <Title>2. Wklej sygnatury</Title>
       <Typography.Paragraph>
         Wklej poniżej skopiowane dane i sprawdź czy wszystko się zgadza.
-        Aplikacja powinna znaleźć wszystkie sygnatury o postaci "xxxxxx-xxxx",
-        np. "123456-7890"
+        Aplikacja wyświetli wszystkie znalezione sygnatury i numery grup.
       </Typography.Paragraph>
       <Input.TextArea
-        style={{ margin: "1em 0" }}
+        placeholder="Wklej dane tutaj"
+        className="lectures-input"
         onChange={handleExtractSignatures}
+        rows={1}
       />
       {inputLectures.length !== 0 && (
         <div style={{ margin: "1em 0" }}>
