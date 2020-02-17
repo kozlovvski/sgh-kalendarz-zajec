@@ -5,7 +5,11 @@ import { ViewContext } from "./ViewManager";
 const BackButton: React.FC<ButtonProps> = props => {
   const { view, changeView } = useContext(ViewContext);
   return view ? (
-    <Button onClick={e => changeView(view - 1)} {...props} />
+    <Button
+      {...props}
+      style={{ ...props.style, marginRight: ".5em" }}
+      onClick={e => changeView(view - 1)}
+    />
   ) : null;
 };
 

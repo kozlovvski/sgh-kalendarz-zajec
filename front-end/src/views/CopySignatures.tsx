@@ -3,6 +3,7 @@ import Title from "antd/lib/typography/Title";
 import React from "react";
 
 import NextButton from "../components/NextButton";
+import BackButton from "../components/BackButton";
 
 interface Props {}
 
@@ -16,6 +17,7 @@ const CopySignatures: React.FC<Props> = () => {
         zawierająca sygnatury będzie w porządku.
       </Typography.Paragraph>
       <img className="gif-image" src="/sygnatury.gif" alt="" />
+      <BackButton>Wstecz</BackButton>
       <NextButton type="primary">Dalej</NextButton>
     </div>
   );

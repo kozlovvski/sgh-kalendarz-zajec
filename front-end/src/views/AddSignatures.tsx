@@ -3,6 +3,7 @@ import Title from "antd/lib/typography/Title";
 import React, { useState, ChangeEvent } from "react";
 
 import NextButton from "../components/NextButton";
+import BackButton from "../components/BackButton";
 
 interface Props {}
 
@@ -34,6 +35,7 @@ const AddSignatures: React.FC<Props> = () => {
           ))}
         </div>
       )}
+      <BackButton>Wstecz</BackButton>
       <NextButton type="primary">Dalej</NextButton>
     </div>
   );
