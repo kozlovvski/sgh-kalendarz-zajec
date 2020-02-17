@@ -1,15 +1,15 @@
-import React, { useContext, useEffect } from "react";
-import { authManager, UserContext } from "../components/AuthManager";
-import { google } from "googleapis";
-import loginUser from "../util/loginUser";
 import firebase from "firebase/app";
-import setCredentialsFromLocalStorage from "../util/setCredentialsFromLocalStorage";
+import { google } from "googleapis";
+import React, { useContext } from "react";
+
+import { authManager, UserContext } from "../components/AuthManager";
+import loginUser from "../util/loginUser";
 import logoutUser from "../util/logoutUser";
 
 interface Props {}
 
 const Index: React.FC<Props> = () => {
-  const { user, setUser } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   const handleLogin = () => {
     loginUser()
