@@ -1,13 +1,16 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useContext } from "react";
 import logoutUser from "../util/logoutUser";
 import { Button } from "antd";
+import { AppContext } from "./AppManager";
 
 interface Props {}
 
 const LogoutButton: React.FC<Props> = () => {
+  const { changeData } = useContext(AppContext);
   const handleLogout = (e: MouseEvent) => {
     logoutUser()
       .then(() => {
+        changeData({ view: 0 });
         console.log("logged out!");
       })
       .catch(err => {
