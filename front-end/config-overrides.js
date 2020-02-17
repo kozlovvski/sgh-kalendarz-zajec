@@ -13,7 +13,7 @@ module.exports = override(
       fs: path.resolve(__dirname, "src/util/mock-fs.js")
     }
   }),
-  fixBabelImports("import", {
+  fixBabelImports("antd", {
     libraryName: "antd",
     libraryDirectory: "es",
     style: "css",
@@ -21,6 +21,6 @@ module.exports = override(
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { "@primary-color": "#1DA57A" }
+    modifyVars: { "@primary-color": "#D7C589" }
   })
 );
