@@ -1,14 +1,17 @@
 import { Typography, Input, Tag } from "antd";
 import Title from "antd/lib/typography/Title";
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, useContext } from "react";
 
 import NextButton from "../components/NextButton";
 import BackButton from "../components/BackButton";
+import { AppContext } from "../components/AppManager";
+import { UserContext } from "../components/AuthManager";
 
 interface Props {}
 
 const AddSignatures: React.FC<Props> = () => {
   const [signatures, setSignatures] = useState<string[]>([]);
+  const { user } = useContext(UserContext);
 
   const handleExtractSignatures = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -36,7 +39,10 @@ const AddSignatures: React.FC<Props> = () => {
         </div>
       )}
       <BackButton>Wstecz</BackButton>
-      <NextButton type="primary">Dalej</NextButton>
+      <NextButton type="primary" disabled={!user}>
+        Dalej
+      </NextButton>
+      {!user && "Aby przejść dalej musisz się zalogować"}
     </div>
   );
 };
