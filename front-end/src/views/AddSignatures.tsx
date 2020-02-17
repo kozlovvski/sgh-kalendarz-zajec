@@ -33,7 +33,14 @@ const AddSignatures: React.FC<Props> = () => {
     }, []);
 
     setInputLectures(matches);
-    changeData({ inputLectures: matches });
+
+    // strip unnecessary letters from lecture group - they don't exist in our database
+    changeData({
+      inputLectures: matches.map(item => ({
+        ...item,
+        group: item.group.replace(/[A-Za-z]+/g, "")
+      }))
+    });
   };
 
   return (

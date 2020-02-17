@@ -39,7 +39,6 @@ const PickStudyType: React.FC<Props> = () => {
         ) as Workbook[];
 
         setWorkbooks(fetchedWorkbooks);
-        console.log(fetchedWorkbooks);
       } catch (err) {
         console.log("error fetching lectures", err);
       }
