@@ -1,3 +1,29 @@
 .blue-text {
   color: $primary--darker !important;
 }
+
+.welcome-text {
+  margin-right: 0.2em;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: color 0.2s ease;
+  will-change: color;
+
+  &:hover {
+    color: $primary--dark;
+  }
+
+  &__tooltip {
+    font-size: 12px;
+    line-height: 1;
+    user-select: none;
+  }
+
+  &__icon {
+    color: $primary--dark;
+
+    font-size: 0.4em;
+  }
+}

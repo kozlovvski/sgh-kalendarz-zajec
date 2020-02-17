@@ -1,13 +1,9 @@
-import firebase from "firebase/app";
-import { google } from "googleapis";
+import { Button, Typography, Tooltip } from "antd";
+import Title from "antd/lib/typography/Title";
 import React, { useContext } from "react";
 
-import { authManager, UserContext } from "../components/AuthManager";
-import loginUser from "../util/loginUser";
-import logoutUser from "../util/logoutUser";
-import { Input, Typography, Button } from "antd";
-import Title from "antd/lib/typography/Title";
 import { ViewContext } from "../components/ViewManager";
+import WelcomeText from "../components/WelcomeText";
 
 interface Props {}
 
@@ -16,16 +12,23 @@ const Index: React.FC<Props> = () => {
 
   return (
     <div className="wrapper">
-      <Title>1. Dodaj przedmioty</Title>
+      <WelcomeText />
       <Typography>
-        Ta aplikacja pozwoli Ci w wygodny sposób dodać swoje przedmioty do
-        Kalendarza Google. Skopiuj listę sygnatur z{" "}
+        Ta aplikacja pozwoli Ci w wygodny sposób dodać swoje przedmioty do{" "}
+        <a href="https://calendar.google.com/" target="_blank">
+          Kalendarza Google
+        </a>
+        . Skopiuj listę sygnatur z{" "}
         <a href="https://dziekanat.sgh.waw.pl/" target="_blank">
           Wirtualnego Dziekanatu
         </a>
         , a my zajmiemy się resztą!
       </Typography>
-      <Button type="primary" onClick={e => changeView(1)}>
+      <Button
+        style={{ display: "block", marginTop: 20 }}
+        type="primary"
+        onClick={e => changeView(1)}
+      >
         Zaczynamy!
       </Button>
     </div>
