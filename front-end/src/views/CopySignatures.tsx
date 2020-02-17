@@ -1,4 +1,4 @@
-import { Typography } from "antd";
+import { Typography, Row, Button } from "antd";
 import Title from "antd/lib/typography/Title";
 import React from "react";
 
@@ -16,6 +16,14 @@ const CopySignatures: React.FC<Props> = () => {
         przykład zaznaczyć tabelkę i ją skopiować, ale jakakolwiek lista
         zawierająca sygnatury będzie w porządku.
       </Typography.Paragraph>
+      <Button
+        icon="link"
+        href="https://dziekanat.sgh.waw.pl/"
+        target="_blank"
+        className="wd-button"
+      >
+        Otwórz Wirtualny Dziekanat
+      </Button>
       <img className="gif-image" src="/sygnatury.gif" alt="" />
       <BackButton>Wstecz</BackButton>
       <NextButton type="primary">Dalej</NextButton>
