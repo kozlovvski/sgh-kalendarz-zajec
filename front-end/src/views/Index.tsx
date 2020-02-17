@@ -7,11 +7,12 @@ import loginUser from "../util/loginUser";
 import logoutUser from "../util/logoutUser";
 import { Input, Typography, Button } from "antd";
 import Title from "antd/lib/typography/Title";
+import { ViewContext } from "../components/ViewManager";
 
 interface Props {}
 
 const Index: React.FC<Props> = () => {
-  const { user } = useContext(UserContext);
+  const { changeView } = useContext(ViewContext);
 
   return (
     <div className="wrapper">
@@ -24,7 +25,9 @@ const Index: React.FC<Props> = () => {
         </a>
         , a my zajmiemy się resztą!
       </Typography>
-      <Button type="primary">Zaczynamy!</Button>
+      <Button type="primary" onClick={e => changeView(1)}>
+        Zaczynamy!
+      </Button>
     </div>
   );
 };

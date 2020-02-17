@@ -4,6 +4,8 @@ import UserContextProvider, { UserContext } from "./components/AuthManager";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
 import Index from "./views/Index";
 import Layout from "./layout/Layout";
+import ViewContextProvider from "./components/ViewManager";
+import CurrentView from "./layout/CurrentView";
 
 const App = () => {
   const { setUser } = useContext(UserContext);
@@ -20,14 +22,16 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <Index />;
+  return <CurrentView />;
 };
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
-    <Layout>
-      <App />
-    </Layout>
+    <ViewContextProvider>
+      <Layout>
+        <App />
+      </Layout>
+    </ViewContextProvider>
   </UserContextProvider>
 );
 
