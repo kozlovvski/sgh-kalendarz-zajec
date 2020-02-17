@@ -13,7 +13,7 @@ const Index: React.FC<Props> = () => {
   return (
     <div className="wrapper">
       <WelcomeText />
-      <Typography>
+      <Typography.Paragraph>
         Ta aplikacja pozwoli Ci w wygodny sposób dodać swoje przedmioty do{" "}
         <a href="https://calendar.google.com/" target="_blank">
           Kalendarza Google
@@ -23,12 +23,8 @@ const Index: React.FC<Props> = () => {
           Wirtualnego Dziekanatu
         </a>
         , a my zajmiemy się resztą!
-      </Typography>
-      <Button
-        style={{ display: "block", marginTop: 20 }}
-        type="primary"
-        onClick={e => changeView(1)}
-      >
+      </Typography.Paragraph>
+      <Button type="primary" onClick={e => changeView(1)}>
         Zaczynamy!
       </Button>
     </div>
