@@ -1,4 +1,9 @@
-const { override, addWebpackResolve } = require("customize-cra");
+const {
+  override,
+  addWebpackResolve,
+  fixBabelImports,
+  addLessLoader
+} = require("customize-cra");
 const path = require("path");
 
 module.exports = override(
@@ -7,5 +12,15 @@ module.exports = override(
     alias: {
       fs: path.resolve(__dirname, "src/util/mock-fs.js")
     }
+  }),
+  fixBabelImports("import", {
+    libraryName: "antd",
+    libraryDirectory: "es",
+    style: "css",
+    style: true
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { "@primary-color": "#1DA57A" }
   })
 );

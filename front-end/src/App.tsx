@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 import UserContextProvider, { UserContext } from "./components/AuthManager";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
 import Index from "./views/Index";
+import Layout from "./components/Layout";
 
 const App = () => {
   const { setUser } = useContext(UserContext);
@@ -24,7 +25,9 @@ const App = () => {
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
-    <App />
+    <Layout>
+      <App />
+    </Layout>
   </UserContextProvider>
 );
 
