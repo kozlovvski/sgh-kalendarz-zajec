@@ -4,11 +4,13 @@ import Index from "../views/Index";
 import AddSignatures from "../views/AddSignatures";
 import CopySignatures from "../views/CopySignatures";
 import FetchLectures from "../views/FetchLectures";
+import PickStudyType from "../views/PickStudyType";
 
 interface Props {}
 
 const Views = [
   <Index />,
+  <PickStudyType />,
   <CopySignatures />,
   <AddSignatures />,
   <FetchLectures />

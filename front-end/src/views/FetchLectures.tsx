@@ -48,7 +48,7 @@ const FetchLectures: React.FC<Props> = () => {
 
   return (
     <div className="wrapper">
-      <Title>3. Pobierz przedmioty</Title>
+      <Title>4. Pobierz przedmioty</Title>
       {loading && (
         <Typography.Paragraph>Pobieranie danych</Typography.Paragraph>
       )}

@@ -38,7 +38,7 @@ const AddSignatures: React.FC<Props> = () => {
 
   return (
     <div className="wrapper">
-      <Title>2. Wklej sygnatury</Title>
+      <Title>3. Wklej sygnatury</Title>
       <Typography.Paragraph>
         Wklej poniżej skopiowane dane i sprawdź czy wszystko się zgadza.
         Aplikacja wyświetli wszystkie znalezione sygnatury i numery grup.
@@ -62,10 +62,13 @@ const AddSignatures: React.FC<Props> = () => {
         </div>
       )}
       <BackButton>Wstecz</BackButton>
-      {/*     <NextButton type="primary" disabled={!user}>
-        Dalej
-          </NextButton> */}
-      {!user && "Aby przejść dalej musisz się zalogować"}
+      {user ? (
+        <NextButton type="primary" disabled={!inputLectures.length}>
+          Dalej
+        </NextButton>
+      ) : (
+        "Aby przejść dalej musisz się zalogować"
+      )}
     </div>
   );
 };

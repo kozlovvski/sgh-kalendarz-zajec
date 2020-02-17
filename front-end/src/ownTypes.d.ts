@@ -50,3 +50,9 @@ export interface InputLecture {
   signature: string;
   group: string;
 }
+
+export interface Workbook {
+  type: string;
+  updated_at: string;
+  url: string;
+}

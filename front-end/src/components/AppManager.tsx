@@ -4,16 +4,19 @@ import { InputLecture } from "../ownTypes";
 export interface AppData {
   view: number;
   inputLectures: InputLecture[];
+  type: string;
 }
 
 export interface AppDataInput {
   view?: number;
   inputLectures?: InputLecture[];
+  type?: string;
 }
 
 export const initialAppData = {
-  view: 2,
-  inputLectures: []
+  view: 0,
+  inputLectures: [],
+  type: ""
 };
 
 export const AppContext = React.createContext<{

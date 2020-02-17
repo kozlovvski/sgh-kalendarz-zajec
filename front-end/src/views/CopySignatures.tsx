@@ -10,7 +10,7 @@ interface Props {}
 const CopySignatures: React.FC<Props> = () => {
   return (
     <div className="wrapper">
-      <Title>1. Skopiuj sygnatury</Title>
+      <Title>2. Skopiuj sygnatury</Title>
       <Typography.Paragraph>
         Skopiuj listę swoich przedmiotów z Wirtualnego Dziekanatu. Po prostu
         zaznacz tabelkę jak zwykły tekst. Upewnij się, czy wszystkie sygnatury i
