@@ -11,7 +11,7 @@ export const ViewContext = React.createContext<{
 });
 
 export const ViewContextProvider: React.FC = ({ children }) => {
-  const [state, setState] = useState<number>(0);
+  const [state, setState] = useState<number>(2);
 
   const changeView = (data: number) => {
     setState(data);

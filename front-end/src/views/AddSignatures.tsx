@@ -1,33 +1,40 @@
-import firebase from "firebase/app";
-import { google } from "googleapis";
-import React, { useContext } from "react";
-
-import { authManager, UserContext } from "../components/AuthManager";
-import loginUser from "../util/loginUser";
-import logoutUser from "../util/logoutUser";
-import { Input, Typography, Button } from "antd";
+import { Typography, Input, List, Tag } from "antd";
 import Title from "antd/lib/typography/Title";
-import { ViewContext } from "../components/ViewManager";
+import React, { useState, ChangeEvent } from "react";
+
+import NextButton from "../components/NextButton";
 
 interface Props {}
 
 const AddSignatures: React.FC<Props> = () => {
-  const { changeView } = useContext(ViewContext);
+  const [signatures, setSignatures] = useState<string[]>([]);
+
+  const handleExtractSignatures = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    const matches = value.match(/\d{6}-\d{4}/g);
+    const withoutDuplicates = [...new Set(matches)];
+
+    matches && setSignatures(withoutDuplicates);
+  };
 
   return (
     <div className="wrapper">
-      <Title>1. Dodaj przedmioty</Title>
-      <Typography>
-        Ta aplikacja pozwoli Ci w wygodny sposób dodać swoje przedmioty do
-        Kalendarza Google. Skopiuj listę sygnatur z{" "}
-        <a href="https://dziekanat.sgh.waw.pl/" target="_blank">
-          Wirtualnego Dziekanatu
-        </a>
-        , a my zajmiemy się resztą!
-      </Typography>
-      <Button type="primary" onClick={e => changeView(1)}>
-        Zaczynamy!
-      </Button>
+      <Title>2. Wklej sygnatury</Title>
+      <Typography.Paragraph>
+        Wklej poniżej skopiowane dane i sprawdź czy wszystko się zgadza.
+        Aplikacja powinna znaleźć wszystkie sygnatury o postaci "xxxxxx-xxxx",
+        np. "123456-7890"
+      </Typography.Paragraph>
+      <Input onChange={handleExtractSignatures} />
+      {signatures.length !== 0 && (
+        <div>
+          <Typography.Title level={4}>Znalezione sygnatury:</Typography.Title>
+          {signatures.map(item => (
+            <Tag>{item}</Tag>
+          ))}
+        </div>
+      )}
+      <NextButton type="primary">Dalej</NextButton>
     </div>
   );
 };
