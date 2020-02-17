@@ -3,7 +3,7 @@ import firebase from "firebase/app";
 import UserContextProvider, { UserContext } from "./components/AuthManager";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
 import Index from "./views/Index";
-import Layout from "./components/Layout";
+import Layout from "./layout/Layout";
 
 const App = () => {
   const { setUser } = useContext(UserContext);

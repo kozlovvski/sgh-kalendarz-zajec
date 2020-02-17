@@ -1,4 +1,6 @@
-@import "variables";
+@import "./variables";
+@import "./google-button";
+@import "./typography";
 
 .full-height {
   min-height: 100vh;
@@ -6,8 +8,23 @@
 }
 
 .app-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
   background-color: $primary;
 }
 
 .user-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.wrapper {
+  max-width: 600px;
 }

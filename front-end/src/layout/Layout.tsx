@@ -1,5 +1,7 @@
+import { Col, Row } from "antd";
 import React from "react";
-import { Col, Row, Button } from "antd";
+
+import UserPanel from "./UserPanel";
 
 interface Props {}
 
@@ -10,8 +12,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         {children}
       </Col>
       <Col span={8} className="user-panel">
-        elo
-        <Button type="primary">elo</Button>
+        <UserPanel />
       </Col>
     </Row>
   );
