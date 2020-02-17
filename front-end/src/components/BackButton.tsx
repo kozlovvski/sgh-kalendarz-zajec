@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import Button, { ButtonProps } from "antd/lib/button";
-import { ViewContext } from "./ViewManager";
+import { AppContext } from "./AppManager";
 
 const BackButton: React.FC<ButtonProps> = props => {
-  const { view, changeView } = useContext(ViewContext);
+  const {
+    data: { view },
+    changeData
+  } = useContext(AppContext);
   return view ? (
     <Button
       {...props}
       style={{ ...props.style, marginRight: ".5em" }}
-      onClick={e => changeView(view - 1)}
+      onClick={e => changeData({ view: view - 1 })}
     />
   ) : null;
 };

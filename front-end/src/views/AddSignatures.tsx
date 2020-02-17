@@ -1,4 +1,4 @@
-import { Typography, Input, List, Tag } from "antd";
+import { Typography, Input, Tag } from "antd";
 import Title from "antd/lib/typography/Title";
 import React, { useState, ChangeEvent } from "react";
 
@@ -15,7 +15,7 @@ const AddSignatures: React.FC<Props> = () => {
     const matches = value.match(/\d{6}-\d{4}/g);
     const withoutDuplicates = [...new Set(matches)];
 
-    matches && setSignatures(withoutDuplicates);
+    setSignatures(withoutDuplicates || []);
   };
 
   return (
@@ -26,9 +26,9 @@ const AddSignatures: React.FC<Props> = () => {
         Aplikacja powinna znaleźć wszystkie sygnatury o postaci "xxxxxx-xxxx",
         np. "123456-7890"
       </Typography.Paragraph>
-      <Input onChange={handleExtractSignatures} />
+      <Input style={{ margin: "1em 0" }} onChange={handleExtractSignatures} />
       {signatures.length !== 0 && (
-        <div>
+        <div style={{ margin: "1em 0" }}>
           <Typography.Title level={4}>Znalezione sygnatury:</Typography.Title>
           {signatures.map(item => (
             <Tag>{item}</Tag>

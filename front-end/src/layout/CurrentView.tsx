@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ViewContext } from "../components/ViewManager";
+import { AppContext } from "../components/AppManager";
 import Index from "../views/Index";
 import AddSignatures from "../views/AddSignatures";
 import CopySignatures from "../views/CopySignatures";
@@ -9,7 +9,7 @@ interface Props {}
 const Views = [<Index />, <CopySignatures />, <AddSignatures />];
 
 const CurrentView: React.FC<Props> = () => {
-  const { view } = useContext(ViewContext);
+  const { view } = useContext(AppContext).data;
   return Views[view];
 };
 

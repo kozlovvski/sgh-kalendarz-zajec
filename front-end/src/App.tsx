@@ -4,7 +4,7 @@ import UserContextProvider, { UserContext } from "./components/AuthManager";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
 import Index from "./views/Index";
 import Layout from "./layout/Layout";
-import ViewContextProvider from "./components/ViewManager";
+import AppContextProvider from "./components/AppManager";
 import CurrentView from "./layout/CurrentView";
 
 const App = () => {
@@ -27,11 +27,11 @@ const App = () => {
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
-    <ViewContextProvider>
+    <AppContextProvider>
       <Layout>
         <App />
       </Layout>
-    </ViewContextProvider>
+    </AppContextProvider>
   </UserContextProvider>
 );
 

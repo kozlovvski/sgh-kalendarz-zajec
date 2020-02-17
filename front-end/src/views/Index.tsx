@@ -2,13 +2,14 @@ import { Button, Typography, Tooltip, Modal } from "antd";
 import Title from "antd/lib/typography/Title";
 import React, { useContext, useState } from "react";
 
-import { ViewContext } from "../components/ViewManager";
+import { AppContext } from "../components/AppManager";
 import WelcomeText from "../components/WelcomeText";
+import NextButton from "../components/NextButton";
 
 interface Props {}
 
 const Index: React.FC<Props> = () => {
-  const { changeView } = useContext(ViewContext);
+  const { changeData } = useContext(AppContext);
   const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   return (
@@ -32,9 +33,7 @@ const Index: React.FC<Props> = () => {
       >
         Jak to działa?
       </Button>
-      <Button type="primary" onClick={e => changeView(1)}>
-        Zaczynamy!
-      </Button>
+      <NextButton type="primary">Zaczynamy!</NextButton>
       <Modal
         visible={showHowItWorks}
         title="Jak to działa?"
