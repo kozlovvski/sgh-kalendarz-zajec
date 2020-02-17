@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import { InputLecture } from "../ownTypes";
 
 export interface AppData {
   view: number;
-  signatures: string[];
+  inputLectures: InputLecture[];
 }
 
 export interface AppDataInput {
   view?: number;
-  signatures?: string[];
+  inputLectures?: InputLecture[];
 }
 
 export const initialAppData = {
-  view: 0,
-  signatures: []
+  view: 2,
+  inputLectures: []
 };
 
 export const AppContext = React.createContext<{
