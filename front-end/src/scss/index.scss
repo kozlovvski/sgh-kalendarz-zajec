@@ -52,3 +52,41 @@
   margin: 1em 0;
   resize: none;
 }
+
+.lectures-table {
+  margin: 1em 0;
+
+  .ant-table-small {
+    border-color: transparent;
+  }
+
+  thead {
+    background-color: $primary--darker;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  .inner-table {
+    .ant-table-body {
+      margin: 0;
+    }
+
+    thead {
+      background-color: transparent;
+
+      span {
+        color: $primary--dark;
+      }
+    }
+
+    tbody {
+      background-color: transparent;
+    }
+  }
+
+  tbody {
+    background-color: #fff;
+  }
+}

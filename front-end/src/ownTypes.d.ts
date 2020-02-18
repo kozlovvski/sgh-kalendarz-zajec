@@ -16,6 +16,7 @@ export interface LecturesEntry {
   start_time: string;
   end_time: string;
   dates: string[];
+  place?: string;
   form?: string;
   group?: string;
   lecturer?: string;

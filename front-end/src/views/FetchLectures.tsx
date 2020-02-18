@@ -1,4 +1,4 @@
-import { Typography, Input, Tag, Table } from "antd";
+import { Typography, Input, Tag, Table, List } from "antd";
 import Title from "antd/lib/typography/Title";
 import React, { useState, ChangeEvent, useContext, useEffect } from "react";
 
@@ -13,9 +13,17 @@ interface Props {}
 
 const initial = [
   {
-    dates: "23-02-20;08-03-20;22-03-20;05-04-20;26-04-20;17-05-20;07-06-20;",
+    dates: [
+      "23-02-20",
+      "08-03-20",
+      "22-03-20",
+      "05-04-20",
+      "26-04-20",
+      "17-05-20",
+      "07-06-20"
+    ],
     end_time: "15:10",
-    form: "ćwiczenia",
+    form: "C",
     group: "101",
     lecturer: "Bystrzycka Hanna",
     name: "Rachunkowość",
@@ -24,9 +32,9 @@ const initial = [
     type: "NLLS"
   },
   {
-    dates: "22-02-20;07-03-20;",
+    dates: ["22-02-20", "07-03-20"],
     end_time: "20:40",
-    form: "Wykład",
+    form: "W",
     group: "10",
     lecturer: "Bystrzycka Hanna",
     name: "Rachunkowość",
@@ -35,9 +43,9 @@ const initial = [
     type: "NLLS"
   },
   {
-    dates: "05-04-20;",
+    dates: ["05-04-20"],
     end_time: "19:45",
-    form: "Wykład",
+    form: "W",
     group: "10",
     lecturer: "Bystrzycka Hanna",
     name: "Rachunkowość",
@@ -46,9 +54,17 @@ const initial = [
     type: "NLLS"
   },
   {
-    dates: "22-02-20;07-03-20;21-03-20;04-04-20;25-04-20;16-05-20;06-06-20;",
+    dates: [
+      "22-02-20",
+      "07-03-20",
+      "21-03-20",
+      "04-04-20",
+      "25-04-20",
+      "16-05-20",
+      "06-06-20"
+    ],
     end_time: "13:20",
-    form: "Wykład",
+    form: "W",
     group: "10",
     lecturer: "Baranowska-Prokop Ewa",
     name: "Marketing globalny",
@@ -97,34 +113,56 @@ const FetchLectures: React.FC<Props> = () => {
 
   return (
     <div className="wrapper">
-      <Title>4. Pobierz przedmioty</Title>
+      <Title>4. Pobieranie przedmiotów</Title>
+      <Typography.Paragraph>
+        Poniżej wymienione są wszystkie przedmioty, które udało nam się znaleźć.
+        Jeżeli wszystko się zgadza, przejdź dalej - wtedy dodamy wydarzenia do
+        Twojego kalendarza.
+      </Typography.Paragraph>
       <Table
         dataSource={lectures}
+        pagination={false}
         loading={loading}
-        scroll={{ x: true }}
         size="small"
+        scroll={{ x: true }}
+        className="lectures-table"
         columns={[
           {
             title: "Sygnatura",
             dataIndex: "signature",
-            key: "signature",
-            fixed: "left"
+            key: "signature"
           },
-          { title: "Przedmiot", dataIndex: "name", key: "name", fixed: "left" },
+          { title: "Przedmiot", dataIndex: "name", key: "name" },
+          { title: "Grupa", dataIndex: "group", key: "group" },
           { title: "Forma", dataIndex: "form", key: "form" },
-          { title: "Wykładowca", dataIndex: "lecturer", key: "lecturer" },
           {
-            title: "Godzina rozpoczęcia",
-            dataIndex: "start_time",
-            key: "start_time"
-          },
-          {
-            title: "Godzina zakończenia",
-            dataIndex: "end_time",
-            key: "end_time"
-          },
-          { title: "Daty", dataIndex: "dates", key: "dates" }
+            title: "Wykładowca",
+            dataIndex: "lecturer",
+            key: "lecturer"
+          }
         ]}
+        expandedRowRender={item => (
+          <Table
+            size="small"
+            pagination={false}
+            dataSource={item.dates.map(date => ({
+              start_time: item.start_time,
+              end_time: item.end_time,
+              date
+            }))}
+            className="inner-table"
+            columns={[
+              { title: "Sala", dataIndex: "place", key: "place" },
+              {
+                title: "Od",
+                dataIndex: "start_time",
+                key: "start_time"
+              },
+              { title: "Do", dataIndex: "end_time", key: "end_time" },
+              { title: "Data", dataIndex: "date", key: "date" }
+            ]}
+          />
+        )}
       />
       <BackButton>Wstecz</BackButton>
       <NextButton type="primary" disabled={loading}>
