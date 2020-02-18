@@ -124,7 +124,6 @@ const FetchLectures: React.FC<Props> = () => {
         pagination={false}
         loading={loading}
         size="small"
-        scroll={{ x: true }}
         className="lectures-table"
         columns={[
           {
@@ -132,13 +131,29 @@ const FetchLectures: React.FC<Props> = () => {
             dataIndex: "signature",
             key: "signature"
           },
-          { title: "Przedmiot", dataIndex: "name", key: "name" },
-          { title: "Grupa", dataIndex: "group", key: "group" },
-          { title: "Forma", dataIndex: "form", key: "form" },
+          {
+            title: "Przedmiot",
+            dataIndex: "name",
+            key: "name",
+            ellipsis: true
+          },
+          {
+            title: "Grupa",
+            dataIndex: "group",
+            key: "group",
+            width: 70
+          },
+          {
+            title: "Forma",
+            dataIndex: "form",
+            key: "form",
+            width: 60
+          },
           {
             title: "Wykładowca",
             dataIndex: "lecturer",
-            key: "lecturer"
+            key: "lecturer",
+            ellipsis: true
           }
         ]}
         expandedRowRender={item => (

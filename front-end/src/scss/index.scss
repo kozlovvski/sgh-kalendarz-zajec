@@ -54,6 +54,10 @@
 }
 
 .lectures-table {
+  .ant-table-body {
+    margin: 0 !important;
+  }
+
   margin: 1em 0;
 
   .ant-table-small {
@@ -69,10 +73,6 @@
   }
 
   .inner-table {
-    .ant-table-body {
-      margin: 0;
-    }
-
     thead {
       background-color: transparent;
 
