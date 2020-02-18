@@ -5,9 +5,14 @@ const parseSheetObject = (data: SheetLecture, type: string): LecturesEntry => {
   // const przedmiot_split = data.Przedmiot.split(/(?<=\d)\ (?=\w)/);
   const przedmiot_split = data.Przedmiot.split(/(?<=\d)[\ -]+(?=[A-Za-z])/);
   const lecturer = data.Prowadzący.replace(/[-\d\s]{2,}/, "");
+  const dates = data["Daty zajęć (dd-mm-rr)"].match(/\d{2}-\d{2}-\d{2}/g);
 
   if (przedmiot_split.length !== 2) {
     console.error(data.Przedmiot, przedmiot_split);
+  }
+
+  if (!dates) {
+    console.error(data["Daty zajęć (dd-mm-rr)"]);
   }
 
   const res = {
@@ -15,7 +20,7 @@ const parseSheetObject = (data: SheetLecture, type: string): LecturesEntry => {
     name: przedmiot_split[1],
     start_time: data.Poczatek,
     end_time: data.Koniec,
-    dates: data["Daty zajęć (dd-mm-rr)"],
+    dates: dates || [],
     form: data.Forma,
     group: String(data["Numer grupy"]),
     lecturer,
