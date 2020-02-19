@@ -2,9 +2,10 @@ import firebase from "firebase/app";
 import React, { useContext, useEffect } from "react";
 import AppContextProvider from "./components/AppManager";
 import UserContextProvider, { UserContext } from "./components/AuthManager";
-import CurrentView from "./layout/CurrentView";
 import Layout from "./layout/Layout";
 import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
+import Routes from "./routes";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const { setUser } = useContext(UserContext);
@@ -22,15 +23,15 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <CurrentView />;
+  return <Routes />;
 };
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
     <AppContextProvider>
-      <Layout>
+      <BrowserRouter>
         <App />
-      </Layout>
+      </BrowserRouter>
     </AppContextProvider>
   </UserContextProvider>
 );

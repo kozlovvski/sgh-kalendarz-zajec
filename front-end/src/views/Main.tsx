@@ -6,7 +6,7 @@ import WelcomeText from "../components/WelcomeText";
 
 interface Props {}
 
-const Index: React.FC<Props> = () => {
+const Main: React.FC<Props> = () => {
   const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   return (
@@ -66,4 +66,4 @@ const Index: React.FC<Props> = () => {
   );
 };
 
-export default Index;
+export default Main;
