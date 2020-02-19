@@ -5,6 +5,7 @@ import AddSignatures from "../views/AddSignatures";
 import CopySignatures from "../views/CopySignatures";
 import FetchLectures from "../views/FetchLectures";
 import PickStudyType from "../views/PickStudyType";
+import UploadingLectures from "../views/UploadingLectures";
 
 interface Props {}
 
@@ -13,7 +14,8 @@ const Views = [
   <PickStudyType />,
   <CopySignatures />,
   <AddSignatures />,
-  <FetchLectures />
+  <FetchLectures />,
+  <UploadingLectures />
 ];
 
 const CurrentView: React.FC<Props> = () => {

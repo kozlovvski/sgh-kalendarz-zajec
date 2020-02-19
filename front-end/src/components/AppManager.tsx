@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import { InputLecture } from "../ownTypes";
+import { InputLecture, LecturesEntry } from "../ownTypes";
 
 export interface AppData {
   view: number;
   inputLectures: InputLecture[];
+  fetchedLectures: LecturesEntry[];
   type: string;
 }
 
 export interface AppDataInput {
   view?: number;
   inputLectures?: InputLecture[];
+  fetchedLectures?: LecturesEntry[];
   type?: string;
 }
 
 export const initialAppData = {
   view: 4,
   inputLectures: [],
+  fetchedLectures: [],
   type: ""
 };
 
