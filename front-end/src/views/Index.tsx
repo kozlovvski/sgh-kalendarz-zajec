@@ -1,15 +1,12 @@
-import { Button, Typography, Tooltip, Modal } from "antd";
-import Title from "antd/lib/typography/Title";
-import React, { useContext, useState } from "react";
+import { Button, Modal, Typography } from "antd";
+import React, { useState } from "react";
 
-import { AppContext } from "../components/AppManager";
-import WelcomeText from "../components/WelcomeText";
 import NextButton from "../components/NextButton";
+import WelcomeText from "../components/WelcomeText";
 
 interface Props {}
 
 const Index: React.FC<Props> = () => {
-  const { changeData } = useContext(AppContext);
   const [showHowItWorks, setShowHowItWorks] = useState(false);
 
   return (
@@ -17,11 +14,19 @@ const Index: React.FC<Props> = () => {
       <WelcomeText />
       <Typography.Paragraph>
         Ta aplikacja pozwoli Ci w wygodny sposób dodać swoje przedmioty do{" "}
-        <a href="https://calendar.google.com/" target="_blank">
+        <a
+          href="https://calendar.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Kalendarza Google
         </a>
         . Skopiuj listę sygnatur z{" "}
-        <a href="https://dziekanat.sgh.waw.pl/" target="_blank">
+        <a
+          href="https://dziekanat.sgh.waw.pl/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Wirtualnego Dziekanatu
         </a>
         , a my zajmiemy się resztą!
@@ -49,6 +54,7 @@ const Index: React.FC<Props> = () => {
           <a
             href="http://administracja.sgh.waw.pl/pl/DSL/harmonogramy_zajec/Strony/default.aspx"
             target="_blank"
+            rel="noopener noreferrer"
           >
             strony Dziekanatu Studium Licencjakiego
           </a>

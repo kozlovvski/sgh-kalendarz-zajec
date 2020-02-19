@@ -1,11 +1,10 @@
-import React, { useEffect, useContext } from "react";
 import firebase from "firebase/app";
-import UserContextProvider, { UserContext } from "./components/AuthManager";
-import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
-import Index from "./views/Index";
-import Layout from "./layout/Layout";
+import React, { useContext, useEffect } from "react";
 import AppContextProvider from "./components/AppManager";
+import UserContextProvider, { UserContext } from "./components/AuthManager";
 import CurrentView from "./layout/CurrentView";
+import Layout from "./layout/Layout";
+import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
 
 const App = () => {
   const { setUser } = useContext(UserContext);
@@ -19,6 +18,7 @@ const App = () => {
     });
 
     setCredentialsFromLocalStorage();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

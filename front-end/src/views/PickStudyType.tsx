@@ -1,20 +1,11 @@
-import { Typography, Input, Tag, Spin, Radio, Button } from "antd";
+import { Button, Spin, Typography } from "antd";
 import Title from "antd/lib/typography/Title";
-import React, {
-  useState,
-  ChangeEvent,
-  useContext,
-  useEffect,
-  MouseEvent
-} from "react";
-
-import NextButton from "../components/NextButton";
-import BackButton from "../components/BackButton";
-import { AppContext } from "../components/AppManager";
-import { UserContext } from "../components/AuthManager";
-import { InputLecture, Workbook } from "../ownTypes";
 import firebase from "firebase/app";
-import { RadioChangeEvent } from "antd/lib/radio";
+import React, { useContext, useEffect, useState } from "react";
+
+import { AppContext } from "../components/AppManager";
+import BackButton from "../components/BackButton";
+import { Workbook } from "../ownTypes";
 
 interface Props {}
 

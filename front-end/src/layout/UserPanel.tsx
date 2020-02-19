@@ -1,8 +1,9 @@
-import React, { useEffect, useContext, useState } from "react";
-import { Col, Row, Button, Spin, Typography } from "antd";
-import firebase from "firebase/app";
-import { UserContext } from "../components/AuthManager";
+import { Spin, Typography } from "antd";
 import Title from "antd/lib/typography/Title";
+import firebase from "firebase/app";
+import React, { useContext, useEffect, useState } from "react";
+
+import { UserContext } from "../components/AuthManager";
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
 
@@ -43,6 +44,8 @@ const UserPanel: React.FC<Props> = () => {
       setUser(user);
       setLoadingUser(false);
     });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return loadingUser ? <Spin /> : user ? <Welcome /> : <Login />;

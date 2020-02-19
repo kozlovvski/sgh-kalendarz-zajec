@@ -1,7 +1,7 @@
-import { authManager } from "../components/AuthManager";
-import { LecturesEntry, EventInput } from "../ownTypes";
 import { google } from "googleapis";
-import parseDateTime from "./parseDateTime";
+
+import { authManager } from "../components/AuthManager";
+import { EventInput } from "../ownTypes";
 
 const addEventToCalendar = (event: EventInput): Promise<any> => {
   const calendar = google.calendar({

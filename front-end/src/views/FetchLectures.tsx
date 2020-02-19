@@ -1,19 +1,18 @@
-import { Typography, Input, Tag, Table, List } from "antd";
+import { Table, Typography } from "antd";
 import Title from "antd/lib/typography/Title";
-import React, { useState, ChangeEvent, useContext, useEffect } from "react";
-
-import NextButton from "../components/NextButton";
-import BackButton from "../components/BackButton";
-import { AppContext } from "../components/AppManager";
-import { UserContext } from "../components/AuthManager";
 import firebase from "firebase/app";
+import React, { useContext, useEffect, useState } from "react";
+
+import { AppContext } from "../components/AppManager";
+import BackButton from "../components/BackButton";
+import NextButton from "../components/NextButton";
 import { LecturesEntry } from "../ownTypes";
 
 interface Props {}
 
 const FetchLectures: React.FC<Props> = () => {
   const [lectures, setLectures] = useState<LecturesEntry[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const {
     data: { inputLectures, type },
@@ -47,10 +46,14 @@ const FetchLectures: React.FC<Props> = () => {
     updateLectures().then(() => {
       setLoading(false);
     });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     changeData({ fetchedLectures: lectures });
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lectures]);
 
   return (

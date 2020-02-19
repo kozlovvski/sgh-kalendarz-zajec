@@ -1,7 +1,4 @@
-import { calendar_v3 } from "googleapis/build/src/apis/calendar/v3";
-import { authManager } from "../components/AuthManager";
-import { LecturesEntry, EventInput } from "../ownTypes";
-import { google } from "googleapis";
+import { EventInput, LecturesEntry } from "../ownTypes";
 import parseDateTime from "./parseDateTime";
 
 const parseToEventList = (

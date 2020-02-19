@@ -1,9 +1,9 @@
-import { Typography, Row, Button } from "antd";
+import { Button, Typography } from "antd";
 import Title from "antd/lib/typography/Title";
 import React from "react";
 
-import NextButton from "../components/NextButton";
 import BackButton from "../components/BackButton";
+import NextButton from "../components/NextButton";
 
 interface Props {}
 
