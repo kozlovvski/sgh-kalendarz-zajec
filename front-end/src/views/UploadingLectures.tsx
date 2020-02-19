@@ -61,6 +61,13 @@ const UploadingLectures: React.FC<Props> = () => {
 
   const createEvents = async () => {
     console.log("fired");
+
+    // In case there was an error and user wants to retry
+    setStep({
+      current: 0,
+      status: "process"
+    });
+
     const calendarId = await addClearCalendar();
 
     if (!calendarId) {
@@ -132,6 +139,8 @@ const UploadingLectures: React.FC<Props> = () => {
                 <Icon type="check-circle" theme="filled" />
               ) : index === step.current && step.status === "process" ? (
                 <Icon type="loading" />
+              ) : index === step.current && step.status !== "error" ? (
+                <Icon type="check-circle" theme="filled" />
               ) : null
             }
           />
