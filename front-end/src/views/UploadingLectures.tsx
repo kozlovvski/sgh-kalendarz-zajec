@@ -44,7 +44,8 @@ const UploadingLectures: React.FC<Props> = () => {
       description: (
         <Progress
           size="small"
-          percent={(progressData.resolved * 100) / progressData.to}
+          percent={(progressData.sent * 100) / progressData.to}
+          successPercent={(progressData.resolved * 100) / progressData.to}
           status={progressData.status}
         />
       )
@@ -127,7 +128,9 @@ const UploadingLectures: React.FC<Props> = () => {
           <Steps.Step
             {...item}
             icon={
-              index === step.current && step.status === "process" ? (
+              index < step.current ? (
+                <Icon type="check-circle" theme="filled" />
+              ) : index === step.current && step.status === "process" ? (
                 <Icon type="loading" />
               ) : null
             }
@@ -137,15 +140,7 @@ const UploadingLectures: React.FC<Props> = () => {
 
       {step.status === "finish" && (
         <>
-          <Typography.Title>
-            <Icon
-              type="check-circle"
-              theme="twoTone"
-              twoToneColor="#52c41a"
-              style={{ marginRight: "0.3em" }}
-            />
-            I gotowe!
-          </Typography.Title>
+          <Typography.Title>I gotowe!</Typography.Title>
           <Typography.Paragraph>
             Wszystkie wydarzenia zostały pomyślnie dodane. Teraz możesz
             wyświetlić swoje wydarzenia w przeglądarce lub telefonie i zrobić z
@@ -165,15 +160,7 @@ const UploadingLectures: React.FC<Props> = () => {
 
       {step.status === "error" && (
         <>
-          <Typography.Title>
-            <Icon
-              type="close-circle"
-              theme="twoTone"
-              twoToneColor="#ff0000"
-              style={{ marginRight: "0.3em" }}
-            />
-            Ups! Coś poszło nie tak.
-          </Typography.Title>
+          <Typography.Title>Ups! Coś poszło nie tak.</Typography.Title>
           <Typography.Paragraph>
             Tylko część wydarzeń została dodana. Możesz spróbować ponownie
             klikając poniżej
