@@ -5,15 +5,19 @@ const loginUser = async () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope("https://www.googleapis.com/auth/calendar");
 
-  const result = await firebase.auth().signInWithPopup(provider);
+  const result = await firebase
+    .auth()
+    .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+    .then(() => firebase.auth().signInWithPopup(provider));
 
   const credentials = result.credential as firebase.auth.OAuthCredential;
 
   credentials.accessToken &&
-    localStorage.setItem("access_token", credentials.accessToken);
-  credentials.idToken && localStorage.setItem("id_token", credentials.idToken);
+    sessionStorage.setItem("access_token", credentials.accessToken);
+  credentials.idToken &&
+    sessionStorage.setItem("id_token", credentials.idToken);
 
-  result.credential &&
+  credentials &&
     authManager.setCredentials({
       access_token: credentials.accessToken,
       id_token: credentials.idToken
