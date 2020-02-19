@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import { authManager } from "../components/AuthManager";
 
-const addClearCalendar = async (): Promise<void> => {
+const addClearCalendar = () => {
   const calendar = google.calendar({
     version: "v3",
     auth: authManager
@@ -12,37 +12,23 @@ const addClearCalendar = async (): Promise<void> => {
     timeZone: "Europe/Warsaw"
   };
 
-  const calendarList = await calendar.calendarList.list();
+  return calendar.calendarList.list().then(calendarList => {
+    const ourCalendar = calendarList.data.items?.find(
+      item => item.summary === "SGH - zajęcia"
+    );
 
-  const ourCalendar = calendarList.data.items?.find(
-    item => item.summary === "SGH - zajęcia"
-  );
-
-  if (!ourCalendar) {
-    calendar.calendars
-      .insert({
-        requestBody: calendarToPut
-      })
-      .catch(err => {
-        return err;
-      });
-  } else {
-    calendar.calendars
-      .delete({
+    if (ourCalendar) {
+      calendar.calendars.delete({
         calendarId: ourCalendar.id!
-      })
-      .catch(err => {
-        return err;
       });
+    }
 
-    calendar.calendars
+    return calendar.calendars
       .insert({
         requestBody: calendarToPut
       })
-      .catch(err => {
-        return err;
-      });
-  }
+      .then(res => res.data.id);
+  });
 };
 
 export default addClearCalendar;
