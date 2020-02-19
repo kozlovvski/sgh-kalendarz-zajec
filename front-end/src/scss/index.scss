@@ -1,29 +1,7 @@
 @import "./variables";
 @import "./buttons";
 @import "./typography";
-
-.full-height {
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
-}
-
-.app-panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 30px;
-
-  background-color: $primary;
-}
-
-.user-panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 30px;
-}
+@import "./layout";
 
 .wrapper {
   max-width: 600px;

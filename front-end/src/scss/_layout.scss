@@ -1,0 +1,39 @@
+.full-height {
+  display: flex;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.app-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background-color: $primary;
+}
+
+.user-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .user-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+
+    border-radius: 10px 10px 0 0;
+
+    transform: translateY(170px);
+  }
+}
