@@ -4,6 +4,10 @@ service cloud.firestore {
       allow read: if request.auth.uid != null;
       allow write: if false;
     }
+    match /workbooks/{workbook} {
+      allow read: if true;
+      allow write: if false;
+    }
     match /{document=**} {
       allow read, write: if false;
     }
