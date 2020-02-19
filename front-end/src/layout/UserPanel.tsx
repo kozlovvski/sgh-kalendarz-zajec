@@ -1,5 +1,4 @@
 import { Spin, Typography } from "antd";
-import Title from "antd/lib/typography/Title";
 import firebase from "firebase/app";
 import React, { useContext, useEffect, useState } from "react";
 
@@ -15,25 +14,29 @@ const Welcome: React.FC = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <div>
-      <Title>
+    <div style={{ maxWidth: 350 }}>
+      <Typography.Title level={3}>
         Witaj,<span className="blue-text"> {user?.displayName}</span>
-      </Title>
-      <Typography>Dobrze Cię widzieć.</Typography>
+      </Typography.Title>
+      <Typography.Paragraph>Dobrze Cię widzieć.</Typography.Paragraph>
       <LogoutButton />
     </div>
   );
 };
 
 const Login: React.FC = () => (
-  <div>
-    <Title>Witaj!</Title>
+  <div style={{ maxWidth: 350 }}>
+    <Typography.Title level={3}>Pierwszy raz tutaj?</Typography.Title>
+    <Typography.Paragraph>
+      Możesz przetestować aplikację bez logowania! Gdy zdecydujesz się dodać
+      przedmioty do kalendarza, zwyczajnie zaloguj się swoim Kontem Google.
+    </Typography.Paragraph>
     <LoginButton />
   </div>
 );
 
 const UserPanel: React.FC<Props> = () => {
-  // const { user, setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   // const [loadingUser, setLoadingUser] = useState<boolean>(true);
 
   // useEffect(() => {
@@ -49,7 +52,7 @@ const UserPanel: React.FC<Props> = () => {
   // }, []);
 
   // return loadingUser ? <Spin /> : user ? <Welcome /> : <Login />;
-  return <Login />;
+  return user ? <Welcome /> : <Login />;
 };
 
 export default UserPanel;

@@ -7,7 +7,7 @@ const loginUser = async () => {
 
   const result = await firebase
     .auth()
-    .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+    .setPersistence(firebase.auth.Auth.Persistence.NONE)
     .then(() => firebase.auth().signInWithPopup(provider));
 
   const credentials = result.credential as firebase.auth.OAuthCredential;
