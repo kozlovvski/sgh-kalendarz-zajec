@@ -57,3 +57,6 @@ export interface Workbook {
   updated_at: string;
   url: string;
 }
+
+import { calendar_v3 } from "googleapis/build/src/apis/calendar/v3";
+export type EventInput = calendar_v3.Params$Resource$Events$Insert;
