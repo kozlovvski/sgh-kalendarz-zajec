@@ -16,7 +16,7 @@ export interface AppDataInput {
 }
 
 export const initialAppData = {
-  view: 5,
+  view: 0,
   inputLectures: [],
   fetchedLectures: [],
   type: ""

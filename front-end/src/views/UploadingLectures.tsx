@@ -13,42 +13,50 @@ const UploadingLectures: React.FC<Props> = () => {
     current: number;
     to: number;
     status: "active" | "normal" | "success" | "exception";
-  }>({ current: 0, to: 20, status: "active" });
+  }>({ current: 0, to: 20, status: "normal" });
 
   const {
     data: { fetchedLectures }
   } = useContext(AppContext);
 
-  // useEffect(() => {
-  //   const createEvents = async () => {
-  //     const calendarId = await addClearCalendar();
+  const createEvents = async () => {
+    const calendarId = await addClearCalendar();
 
-  //     if (calendarId) {
-  //       const individualEvents = fetchedLectures
-  //         .map(lecture => parseToEventList(lecture, calendarId))
-  //         .flat();
+    if (calendarId) {
+      const individualEvents = fetchedLectures
+        .map(lecture => parseToEventList(lecture, calendarId))
+        .flat();
 
-  //       if (individualEvents.length) {
-  //         setProgressData(prev => ({ ...prev, to: individualEvents.length }));
+      setProgressData({
+        current: 0,
+        to: individualEvents.length,
+        status: "active"
+      });
 
-  //         Promise.all(
-  //           individualEvents.map(event => {
-  //             return addEventToCalendar(event).then(res => {
-  //               setProgressData(prev => ({
-  //                 ...prev,
-  //                 current: prev.current + 1
-  //               }));
-  //             });
-  //           })
-  //         ).then(() => {
-  //           setDone(true);
-  //         });
-  //       }
-  //     }
-  //   };
+      if (individualEvents.length) {
+        Promise.all(
+          individualEvents.map(event => {
+            return addEventToCalendar(event).then(res => {
+              setProgressData(prev => ({
+                ...prev,
+                current: prev.current + 1
+              }));
+            });
+          })
+        )
+          .then(() => {
+            setProgressData(prev => ({ ...prev, status: "success" }));
+          })
+          .catch(err => {
+            setProgressData(prev => ({ ...prev, status: "exception" }));
+          });
+      }
+    }
+  };
 
-  //   createEvents();
-  // }, []);
+  useEffect(() => {
+    createEvents();
+  }, []);
 
   return (
     <div className="wrapper">
@@ -63,41 +71,59 @@ const UploadingLectures: React.FC<Props> = () => {
       />
       <p>{progressData.current + "/" + progressData.to}</p>
       <button
-        onClick={e => setProgressData(prev => ({ ...prev, status: "success" }))}
-      >
-        done
-      </button>
-      <button
         onClick={e =>
-          setProgressData(prev => ({ ...prev, current: prev.current + 1 }))
+          setProgressData(prev => ({ ...prev, status: "exception" }))
         }
       >
-        Dodaj
+        error
       </button>
 
-      <Typography.Title>
-        <Icon
-          type="check-circle"
-          theme="twoTone"
-          twoToneColor="#52c41a"
-          style={{ marginRight: "0.3em" }}
-        />
-        I gotowe!
-      </Typography.Title>
-      <Typography.Paragraph>
-        Wszystkie wydarzenia zostały pomyślnie dodane. Teraz możesz wyświetlić
-        swoje wydarzenia w przeglądarce lub telefonie i zrobić z nimi wszystko
-        co z normalnym kalendarzem! Mamy nadzieję, że będziesz równie
-        zadowolona/y co my!
-      </Typography.Paragraph>
-      <Button
-        icon="link"
-        href="https://calendar.google.com/"
-        target="_blank"
-        className="calendar-button"
-      >
-        Otwórz Kalendarz Google
-      </Button>
+      {progressData.status === "success" && (
+        <>
+          <Typography.Title>
+            <Icon
+              type="check-circle"
+              theme="twoTone"
+              twoToneColor="#52c41a"
+              style={{ marginRight: "0.3em" }}
+            />
+            I gotowe!
+          </Typography.Title>
+          <Typography.Paragraph>
+            Wszystkie wydarzenia zostały pomyślnie dodane. Teraz możesz
+            wyświetlić swoje wydarzenia w przeglądarce lub telefonie i zrobić z
+            nimi wszystko co z normalnym kalendarzem! Mamy nadzieję, że będziesz
+            równie zadowolona/y co my!
+          </Typography.Paragraph>
+          <Button
+            icon="link"
+            href="https://calendar.google.com/"
+            target="_blank"
+            className="calendar-button"
+          >
+            Otwórz Kalendarz Google
+          </Button>
+        </>
+      )}
+
+      {progressData.status === "exception" && (
+        <>
+          <Typography.Title>
+            <Icon
+              type="close-circle"
+              theme="twoTone"
+              twoToneColor="#ff0000"
+              style={{ marginRight: "0.3em" }}
+            />
+            Ups! Coś poszło nie tak.
+          </Typography.Title>
+          <Typography.Paragraph>
+            Tylko część wydarzeń została dodana. Możesz spróbować ponownie
+            klikając poniżej
+          </Typography.Paragraph>
+          <Button type="primary">Spróbuj ponownie</Button>
+        </>
+      )}
     </div>
   );
 };
