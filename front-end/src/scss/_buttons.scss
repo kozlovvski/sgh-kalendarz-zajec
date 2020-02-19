@@ -44,3 +44,31 @@
     background: darken($color: $primary, $amount: 10);
   }
 }
+
+.calendar-button {
+  background-color: #1a73e8;
+  border-color: #1a73e8;
+  color: #fff !important;
+
+  &:hover,
+  &:focus {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+    color: #fff !important;
+    opacity: 0.8;
+  }
+}
+
+.wd-button {
+  background-color: rgb(0, 104, 91);
+  border-color: rgb(0, 104, 91);
+  color: #fff !important;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(0, 104, 91);
+    border-color: rgb(0, 104, 91);
+    color: #fff !important;
+    opacity: 0.8;
+  }
+}

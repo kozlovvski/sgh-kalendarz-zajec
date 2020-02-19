@@ -1,5 +1,5 @@
 @import "./variables";
-@import "./google-button";
+@import "./buttons";
 @import "./typography";
 
 .full-height {
@@ -33,19 +33,6 @@
   display: block;
   max-width: 100%;
   margin: 1em 0;
-}
-
-.wd-button {
-  background-color: rgb(0, 104, 91);
-  border-color: rgb(0, 104, 91);
-  color: #fff;
-
-  &:hover {
-    background-color: rgb(0, 104, 91);
-    border-color: rgb(0, 104, 91);
-    color: #fff;
-    opacity: 0.8;
-  }
 }
 
 .lectures-input {
