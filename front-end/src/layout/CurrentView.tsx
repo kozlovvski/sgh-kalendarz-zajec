@@ -19,9 +19,9 @@ const views = [
   <UploadingLectures />
 ];
 
-const Index: React.FC<Props> = () => {
+const CurrentView: React.FC<Props> = () => {
   const { view } = useContext(AppContext).data;
   return <Layout>{views[view]}</Layout>;
 };
 
-export default Index;
+export default CurrentView;

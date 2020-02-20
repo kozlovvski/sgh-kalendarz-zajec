@@ -1,22 +1,20 @@
-import firebase from "firebase/app";
-import React, { useContext, useEffect } from "react";
+import React from "react";
+
 import AppContextProvider from "./components/AppManager";
-import UserContextProvider, { UserContext } from "./components/AuthManager";
+import UserContextProvider from "./components/AuthManager";
+import CurrentView from "./layout/CurrentView";
 import Layout from "./layout/Layout";
-import setCredentialsFromLocalStorage from "./util/setCredentialsFromLocalStorage";
-import Routes from "./routes";
-import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-  return <Routes />;
+  return <CurrentView />;
 };
 
 const WrappedApp: React.FC = () => (
   <UserContextProvider>
     <AppContextProvider>
-      <BrowserRouter>
+      <Layout>
         <App />
-      </BrowserRouter>
+      </Layout>
     </AppContextProvider>
   </UserContextProvider>
 );
