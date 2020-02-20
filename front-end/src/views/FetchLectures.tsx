@@ -62,6 +62,155 @@ const FetchLectures: React.FC<Props> = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lectures]);
 
+  const tableColumns = [
+    {
+      title: "Sygnatura",
+      dataIndex: "signature",
+      key: "signature"
+    },
+    {
+      title: "Przedmiot",
+      dataIndex: "name",
+      key: "name",
+      ellipsis: true
+    },
+    {
+      title: "Grupa",
+      dataIndex: "group",
+      key: "group",
+      ellipsis: true
+    },
+    {
+      title: "Forma",
+      dataIndex: "form",
+      key: "form",
+      ellipsis: true
+    },
+    {
+      title: "Wykładowca",
+      dataIndex: "lecturer",
+      key: "lecturer",
+      ellipsis: true
+    }
+  ];
+
+  const DesktopTable = () => (
+    <Table
+      dataSource={lectures}
+      pagination={false}
+      loading={loading}
+      size="small"
+      className="lectures-table"
+      columns={[
+        {
+          title: "Sygnatura",
+          dataIndex: "signature",
+          key: "signature"
+        },
+        {
+          title: "Przedmiot",
+          dataIndex: "name",
+          key: "name",
+          ellipsis: true
+        },
+        {
+          title: "Grupa",
+          dataIndex: "group",
+          key: "group",
+          width: 70
+        },
+        {
+          title: "Forma",
+          dataIndex: "form",
+          key: "form",
+          width: 70
+        },
+        {
+          title: "Wykładowca",
+          dataIndex: "lecturer",
+          key: "lecturer",
+          ellipsis: true
+        }
+      ]}
+      expandedRowRender={item => (
+        <Table
+          size="small"
+          pagination={false}
+          dataSource={item.dates.map(date => ({
+            place: item.place,
+            start_time: item.start_time,
+            end_time: item.end_time,
+            date
+          }))}
+          className="inner-table"
+          columns={[
+            { title: "Sala", dataIndex: "place", key: "place" },
+            {
+              title: "Od",
+              dataIndex: "start_time",
+              key: "start_time"
+            },
+            { title: "Do", dataIndex: "end_time", key: "end_time" },
+            { title: "Data", dataIndex: "date", key: "date" }
+          ]}
+        />
+      )}
+    />
+  );
+
+  const MobileTable = () => (
+    <Table
+      dataSource={lectures}
+      pagination={false}
+      loading={loading}
+      size="small"
+      className="lectures-table"
+      columns={[
+        {
+          title: "Przedmiot",
+          dataIndex: "name",
+          key: "name",
+          ellipsis: true
+        },
+        {
+          title: "Forma",
+          dataIndex: "form",
+          key: "form",
+          width: 50
+        },
+        {
+          title: "Wykładowca",
+          dataIndex: "lecturer",
+          key: "lecturer",
+          ellipsis: true
+        }
+      ]}
+      expandedRowRender={item => (
+        <Table
+          size="small"
+          pagination={false}
+          dataSource={item.dates.map(date => ({
+            place: item.place,
+            start_time: item.start_time,
+            end_time: item.end_time,
+            date
+          }))}
+          className="inner-table"
+          columns={[
+            { title: "Sala", dataIndex: "place", key: "place" },
+            {
+              title: "Od",
+              dataIndex: "start_time",
+              key: "start_time"
+            },
+            { title: "Do", dataIndex: "end_time", key: "end_time" },
+            { title: "Data", dataIndex: "date", key: "date" }
+          ]}
+        />
+      )}
+    />
+  );
+
   return (
     <div className="wrapper">
       <Title>4. Pobieranie przedmiotów</Title>
@@ -70,67 +219,9 @@ const FetchLectures: React.FC<Props> = () => {
         Jeżeli wszystko się zgadza, przejdź dalej - wtedy dodamy wydarzenia do
         Twojego kalendarza.
       </Typography.Paragraph>
-      <Table
-        dataSource={lectures}
-        pagination={false}
-        loading={loading}
-        size="small"
-        className="lectures-table"
-        columns={[
-          {
-            title: "Sygnatura",
-            dataIndex: "signature",
-            key: "signature"
-          },
-          {
-            title: "Przedmiot",
-            dataIndex: "name",
-            key: "name",
-            ellipsis: true
-          },
-          {
-            title: "Grupa",
-            dataIndex: "group",
-            key: "group",
-            width: 70
-          },
-          {
-            title: "Forma",
-            dataIndex: "form",
-            key: "form",
-            width: 60
-          },
-          {
-            title: "Wykładowca",
-            dataIndex: "lecturer",
-            key: "lecturer",
-            ellipsis: true
-          }
-        ]}
-        expandedRowRender={item => (
-          <Table
-            size="small"
-            pagination={false}
-            dataSource={item.dates.map(date => ({
-              place: item.place,
-              start_time: item.start_time,
-              end_time: item.end_time,
-              date
-            }))}
-            className="inner-table"
-            columns={[
-              { title: "Sala", dataIndex: "place", key: "place" },
-              {
-                title: "Od",
-                dataIndex: "start_time",
-                key: "start_time"
-              },
-              { title: "Do", dataIndex: "end_time", key: "end_time" },
-              { title: "Data", dataIndex: "date", key: "date" }
-            ]}
-          />
-        )}
-      />
+
+      {window.innerWidth <= 600 ? <MobileTable /> : <DesktopTable />}
+
       {failedLectures.length !== 0 && (
         <>
           <Typography.Title level={4}>
