@@ -4,17 +4,19 @@ import AppContextProvider from "./components/AppManager";
 import UserContextProvider from "./components/AuthManager";
 import CurrentView from "./layout/CurrentView";
 import Layout from "./layout/Layout";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
 
 const App = () => {
-  return <CurrentView />;
+  return <Routes />;
 };
 
 const WrappedApp: React.FC = () => (
   <AppContextProvider>
     <UserContextProvider>
-      <Layout>
+      <BrowserRouter>
         <App />
-      </Layout>
+      </BrowserRouter>
     </UserContextProvider>
   </AppContextProvider>
 );

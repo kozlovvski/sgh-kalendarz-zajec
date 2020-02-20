@@ -5,6 +5,7 @@ import { UserContext } from "../components/AuthManager";
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
 import { AppContext } from "../components/AppManager";
+import { Link } from "react-router-dom";
 
 interface Props {
   children?: never;
@@ -32,6 +33,10 @@ const Login: React.FC = () => (
       przedmioty do kalendarza, zwyczajnie zaloguj się swoim Kontem Google.
     </Typography.Paragraph>
     <LoginButton />
+    <Typography.Paragraph>
+      Logując się wyrażasz zgodę na wykorzystanie Twoich danych zgodnie z{" "}
+      <Link to="/polityka-prywatnosci">Polityką Prywatności</Link>.
+    </Typography.Paragraph>
   </div>
 );
 
