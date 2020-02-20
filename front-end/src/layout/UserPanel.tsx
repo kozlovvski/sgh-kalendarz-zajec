@@ -1,9 +1,10 @@
-import { Typography } from "antd";
+import { Typography, Icon } from "antd";
 import React, { useContext } from "react";
 
 import { UserContext } from "../components/AuthManager";
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
+import { AppContext } from "../components/AppManager";
 
 interface Props {
   children?: never;
@@ -36,22 +37,17 @@ const Login: React.FC = () => (
 
 const UserPanel: React.FC<Props> = () => {
   const { user, setUser } = useContext(UserContext);
-  // const [loadingUser, setLoadingUser] = useState<boolean>(true);
+  const {
+    data: { isLoggingIn }
+  } = useContext(AppContext);
 
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged(user => {
-  //     // TODO: check how to update googleapis tokens if they expired.
-  //     // Probably will need to change GoogleAuthProvider to signing in with credentials
-  //     // https://stackoverflow.com/questions/49929134/how-to-get-refresh-token-for-google-api-using-firebase-authentication
-  //     setUser(user);
-  //     setLoadingUser(false);
-  //   });
-
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
-  // return loadingUser ? <Spin /> : user ? <Welcome /> : <Login />;
-  return user ? <Welcome /> : <Login />;
+  return user ? (
+    <Welcome />
+  ) : isLoggingIn ? (
+    <Icon type="loading" style={{ fontSize: 40 }} />
+  ) : (
+    <Login />
+  );
 };
 
 export default UserPanel;
