@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Tooltip, Typography, Icon } from "antd";
+import { AppContext } from "./AppManager";
 
 interface Props {}
 
 const randomWelcomeText = () => {
   const welcomeTexts = [
-    "Hej!",
-    "Serwus!",
-    "Siemanko!",
-    "Hejka!",
-    "Halko!",
-    "Witaj!",
-    "Siemka!",
-    "Dzień dobry!"
+    "Hej",
+    "Serwus",
+    "Siemanko",
+    "Hejka",
+    "Halko",
+    "Witaj",
+    "Siemka",
+    "Dzień dobry"
   ];
 
   const randomIndex = Math.floor(Math.random() * welcomeTexts.length);
@@ -22,6 +23,7 @@ const randomWelcomeText = () => {
 
 const WelcomeText: React.FC<Props> = () => {
   const [text, setText] = useState(randomWelcomeText());
+  const { changeData } = useContext(AppContext);
 
   const setNewText = () => {
     let newText = randomWelcomeText();
@@ -30,13 +32,14 @@ const WelcomeText: React.FC<Props> = () => {
       newText = randomWelcomeText();
     }
 
+    changeData({ prefferedWelcome: newText });
     setText(newText);
   };
 
   return (
     <Typography.Title>
       <span className="welcome-text" onClick={e => setNewText()}>
-        {text}
+        {text + "!"}
       </span>
       <Tooltip
         placement="right"

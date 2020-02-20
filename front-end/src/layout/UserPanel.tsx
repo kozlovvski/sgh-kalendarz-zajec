@@ -12,12 +12,16 @@ interface Props {
 }
 
 const Welcome: React.FC = () => {
+  const {
+    data: { prefferedWelcome }
+  } = useContext(AppContext);
   const { user } = useContext(UserContext);
 
   return (
     <div style={{ maxWidth: 350 }}>
       <Typography.Title level={3}>
-        Witaj,<span className="blue-text"> {user?.displayName}</span>
+        {prefferedWelcome || "Witaj"},
+        <span className="blue-text"> {user?.displayName}</span>
       </Typography.Title>
       <Typography.Paragraph>Dobrze Cię widzieć.</Typography.Paragraph>
       <LogoutButton />

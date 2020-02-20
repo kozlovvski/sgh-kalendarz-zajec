@@ -7,6 +7,7 @@ export interface AppData {
   fetchedLectures: LecturesEntry[];
   type: string;
   isLoggingIn: boolean;
+  prefferedWelcome?: string;
 }
 
 export interface AppDataInput {
@@ -15,6 +16,7 @@ export interface AppDataInput {
   fetchedLectures?: LecturesEntry[];
   type?: string;
   isLoggingIn?: boolean;
+  prefferedWelcome?: string;
 }
 
 export const initialAppData = {
