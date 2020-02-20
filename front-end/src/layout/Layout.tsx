@@ -25,8 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           className="user-panel-button user-panel-button--close"
           onClick={e => setIsOpen(false)}
         >
-          <Icon type="arrow-left" />
-          Powrót
+          <Icon type="arrow-left" /> Powrót
         </button>
       </div>
     </div>
