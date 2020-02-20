@@ -67,11 +67,6 @@ export const UserContextProvider: React.FC = ({ children }) => {
       });
   }, []);
 
-  useEffect(() => {
-    const isLoggingIn = sessionStorage.getItem("is_logging_in");
-    isLoggingIn && changeData({ isLoggingIn: JSON.parse(isLoggingIn) });
-  }, []);
-
   return (
     <UserContext.Provider value={{ user: state, setUser }}>
       {children}

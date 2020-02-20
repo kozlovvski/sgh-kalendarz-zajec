@@ -45,8 +45,22 @@ export const AppContextProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     if (isFirstRead) {
+      const isLoggingIn = sessionStorage.getItem("is_logging_in") as
+        | "true"
+        | "false"
+        | null;
       const storageString = sessionStorage.getItem("app-data");
-      storageString && setState(JSON.parse(storageString));
+      if (storageString) {
+        const storageAppData: AppData = JSON.parse(storageString);
+        if (isLoggingIn && JSON.parse(isLoggingIn)) {
+          changeData({
+            ...storageAppData,
+            isLoggingIn: JSON.parse(isLoggingIn)
+          });
+        } else {
+          changeData(storageAppData);
+        }
+      }
     } else {
       sessionStorage.setItem("app-data", JSON.stringify(state));
     }
