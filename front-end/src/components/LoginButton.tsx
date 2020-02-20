@@ -5,18 +5,13 @@ import loginUser from "../util/loginUser";
 interface Props {}
 
 const LoginButton: React.FC<Props> = () => {
-  const handleLogout = (e: MouseEvent) => {
-    loginUser()
-      .then(() => {
-        console.log("logged in!");
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
-
   return (
-    <div className="google-btn" onClick={handleLogout}>
+    <div
+      className="google-btn"
+      onClick={e => {
+        loginUser();
+      }}
+    >
       <div className="google-icon-wrapper">
         <img
           className="google-icon"
