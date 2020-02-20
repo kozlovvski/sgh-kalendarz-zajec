@@ -1,4 +1,4 @@
-import { Table, Typography } from "antd";
+import { Table, Typography, Tag } from "antd";
 import Title from "antd/lib/typography/Title";
 import firebase from "firebase/app";
 import React, { useContext, useEffect, useState } from "react";
@@ -6,12 +6,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../components/AppManager";
 import BackButton from "../components/BackButton";
 import NextButton from "../components/NextButton";
-import { LecturesEntry } from "../ownTypes";
+import { LecturesEntry, InputLecture } from "../ownTypes";
 
 interface Props {}
 
 const FetchLectures: React.FC<Props> = () => {
   const [lectures, setLectures] = useState<LecturesEntry[]>([]);
+  const [failedLectures, setFailedLectures] = useState<InputLecture[]>([]);
   const [loading, setLoading] = useState(true);
 
   const {
@@ -22,20 +23,25 @@ const FetchLectures: React.FC<Props> = () => {
   useEffect(() => {
     const updateLectures = () => {
       return Promise.all(
-        inputLectures.map(async ({ signature, group }) => {
+        inputLectures.map(async lecture => {
           try {
             const snapshot = await firebase
               .firestore()
               .collection("lectures")
-              .where("signature", "==", signature)
+              .where("signature", "==", lecture.signature)
               .where("type", "==", type)
-              .where("group", "==", group)
+              .where("group", "==", lecture.group)
               .get();
 
             const newLectures = snapshot.docs.map(doc =>
               doc.data()
             ) as LecturesEntry[];
-            setLectures(prev => [...prev, ...newLectures]);
+
+            if (newLectures.length > 0) {
+              setLectures(prev => [...prev, ...newLectures]);
+            } else {
+              setFailedLectures(prev => [...prev, lecture]);
+            }
           } catch (err) {
             console.log("error fetching lectures", err);
           }
@@ -125,6 +131,37 @@ const FetchLectures: React.FC<Props> = () => {
           />
         )}
       />
+      {failedLectures.length !== 0 && (
+        <>
+          <Typography.Title level={4}>
+            Nieodnalezione przedmioty:
+          </Typography.Title>
+          {failedLectures.map(item => (
+            <Tag>
+              <b>Sygnatura: </b>
+              {item.signature} <b>Grupa: </b>
+              {item.group}
+            </Tag>
+          ))}
+          <Typography.Paragraph>
+            Nasza baza jest złożona z plików .xls udostępnianych przez dziekanat
+            na swojej stronie, dlatego nie jesteśmy w stanie znaleźć np.:
+          </Typography.Paragraph>
+          <ul>
+            <li>lektoratów</li>
+            <li>wychowania fizycznego</li>
+            <li>
+              e-learningów (przez to, że grupy w WD nie pokrywają się z tymi w
+              plikach udostępnianych przez dziekanat)
+            </li>
+          </ul>
+          <Typography.Paragraph>
+            Jeżeli uważasz, że wystąpił błąd, skontaktuj się proszę z nami pod
+            adresem <a href="mailto:michal@kozlovv.ski">michal@kozlovv.ski</a> i
+            postaramy się to naprawić.
+          </Typography.Paragraph>
+        </>
+      )}
       <BackButton>Wstecz</BackButton>
       <NextButton type="primary" disabled={loading}>
         Dalej
