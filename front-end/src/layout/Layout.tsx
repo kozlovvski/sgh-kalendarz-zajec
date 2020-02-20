@@ -24,13 +24,14 @@ const Layout: React.FC<Props> = ({ children }) => {
         >
           {user ? (
             <>
-              Twój profil <Icon type="arrow-right" />
+              Twój profil <Icon type="arrow-right" style={{ marginLeft: 10 }} />
             </>
           ) : isLoggingIn ? (
             <Icon type="loading" />
           ) : (
             <>
-              Logowanie <Icon type="arrow-right" />
+              Logowanie
+              <Icon type="arrow-right" style={{ marginLeft: 10 }} />
             </>
           )}
         </button>
@@ -41,7 +42,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           className="user-panel-button user-panel-button--close"
           onClick={e => setIsOpen(false)}
         >
-          <Icon type="arrow-left" /> Powrót
+          <Icon type="arrow-left" style={{ marginRight: 10 }} />
+          Powrót
         </button>
       </div>
     </div>
