@@ -11,9 +11,15 @@ import { InputLecture } from "../ownTypes";
 interface Props {}
 
 const AddSignatures: React.FC<Props> = () => {
-  const [inputLectures, setInputLectures] = useState<InputLecture[]>([]);
+  const {
+    data: { inputLectures: contextInputLectures },
+    changeData
+  } = useContext(AppContext);
+
+  const [inputLectures, setInputLectures] = useState<InputLecture[]>(
+    contextInputLectures
+  );
   const { user } = useContext(UserContext);
-  const { changeData } = useContext(AppContext);
 
   const handleExtractSignatures = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;

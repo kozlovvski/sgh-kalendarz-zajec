@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { InputLecture, LecturesEntry } from "../ownTypes";
 
 export interface AppData {
@@ -37,10 +37,21 @@ export const AppContext = React.createContext<{
 
 export const AppContextProvider: React.FC = ({ children }) => {
   const [state, setState] = useState<AppData>(initialAppData);
+  const [isFirstRead, setIsFirstRead] = useState(true);
 
   const changeData = (data: AppDataInput) => {
     setState(prev => ({ ...prev, ...data }));
   };
+
+  useEffect(() => {
+    if (isFirstRead) {
+      const storageString = sessionStorage.getItem("app-data");
+      storageString && setState(JSON.parse(storageString));
+    } else {
+      sessionStorage.setItem("app-data", JSON.stringify(state));
+    }
+    setIsFirstRead(false);
+  }, [state]);
 
   return (
     <AppContext.Provider value={{ data: state, changeData }}>
