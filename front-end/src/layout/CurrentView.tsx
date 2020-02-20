@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
+
 import { AppContext } from "../components/AppManager";
-import Main from "../views/Main";
 import AddSignatures from "../views/AddSignatures";
 import CopySignatures from "../views/CopySignatures";
 import FetchLectures from "../views/FetchLectures";
+import Main from "../views/Main";
 import PickStudyType from "../views/PickStudyType";
 import UploadingLectures from "../views/UploadingLectures";
-import Layout from "../layout/Layout";
 
 interface Props {}
 
@@ -21,7 +21,7 @@ const views = [
 
 const CurrentView: React.FC<Props> = () => {
   const { view } = useContext(AppContext).data;
-  return <Layout>{views[view]}</Layout>;
+  return views[view];
 };
 
 export default CurrentView;

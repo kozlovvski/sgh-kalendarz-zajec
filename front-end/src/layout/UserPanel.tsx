@@ -1,6 +1,5 @@
-import { Spin, Typography } from "antd";
-import firebase from "firebase/app";
-import React, { useContext, useEffect, useState } from "react";
+import { Typography } from "antd";
+import React, { useContext } from "react";
 
 import { UserContext } from "../components/AuthManager";
 import LoginButton from "../components/LoginButton";
