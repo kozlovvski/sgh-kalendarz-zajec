@@ -30,7 +30,9 @@ const Login: React.FC = () => (
     <Typography.Title level={3}>Pierwszy raz tutaj?</Typography.Title>
     <Typography.Paragraph>
       Możesz przetestować aplikację bez logowania! Gdy zdecydujesz się dodać
-      przedmioty do kalendarza, zwyczajnie zaloguj się swoim Kontem Google.
+      przedmioty do kalendarza, zwyczajnie zaloguj się swoim Kontem Google -
+      potrzebujemy dostępu do Twojego kalendarza, żeby móc do niego dodać
+      wydarzenia.
     </Typography.Paragraph>
     <LoginButton />
     <Typography.Paragraph>
