@@ -3,8 +3,10 @@
 @import "./typography";
 @import "./layout";
 
-.wrapper {
-  max-width: 600px;
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .gif-image {
