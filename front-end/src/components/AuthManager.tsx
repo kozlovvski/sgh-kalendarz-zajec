@@ -1,8 +1,9 @@
 import { google } from "googleapis";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import firebase from "firebase/app";
 
 import { clientId, clientSecret, redirectUri } from "../google.config";
+import { AppContext } from "./AppManager";
 
 export const authManager = new google.auth.OAuth2({
   clientId,
@@ -24,6 +25,7 @@ export const UserContext = React.createContext<{
 
 export const UserContextProvider: React.FC = ({ children }) => {
   const [state, setState] = useState<AppUser>(null);
+  const { changeData } = useContext(AppContext);
 
   const setUser = (data: AppUser) => {
     setState(data);
@@ -34,7 +36,10 @@ export const UserContextProvider: React.FC = ({ children }) => {
       // TODO: check how to update googleapis tokens if they expired.
       // Probably will need to change GoogleAuthProvider to signing in with credentials
       // https://stackoverflow.com/questions/49929134/how-to-get-refresh-token-for-google-api-using-firebase-authentication
+
       setUser(result);
+      changeData({ isLoggingIn: false });
+      sessionStorage.setItem("is_logging_in", "false");
     });
 
     firebase
@@ -44,8 +49,7 @@ export const UserContextProvider: React.FC = ({ children }) => {
         const credentials = result.credential as firebase.auth.OAuthCredential;
 
         if (credentials) {
-          credentials.accessToken &&
-            sessionStorage.setItem("access_token", credentials.accessToken);
+          // store id_token for login for session restoring
           credentials.idToken &&
             sessionStorage.setItem("id_token", credentials.idToken);
 
@@ -61,6 +65,11 @@ export const UserContextProvider: React.FC = ({ children }) => {
       .catch(err => {
         console.log(err);
       });
+  }, []);
+
+  useEffect(() => {
+    const isLoggingIn = sessionStorage.getItem("is_logging_in");
+    isLoggingIn && changeData({ isLoggingIn: JSON.parse(isLoggingIn) });
   }, []);
 
   return (

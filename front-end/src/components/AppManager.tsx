@@ -6,6 +6,7 @@ export interface AppData {
   inputLectures: InputLecture[];
   fetchedLectures: LecturesEntry[];
   type: string;
+  isLoggingIn: boolean;
 }
 
 export interface AppDataInput {
@@ -13,13 +14,15 @@ export interface AppDataInput {
   inputLectures?: InputLecture[];
   fetchedLectures?: LecturesEntry[];
   type?: string;
+  isLoggingIn?: boolean;
 }
 
 export const initialAppData = {
   view: 0,
   inputLectures: [],
   fetchedLectures: [],
-  type: ""
+  type: "",
+  isLoggingIn: false
 };
 
 export const AppContext = React.createContext<{

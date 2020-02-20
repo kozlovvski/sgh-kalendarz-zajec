@@ -8,7 +8,10 @@ const loginUser = () => {
   firebase
     .auth()
     .setPersistence(firebase.auth.Auth.Persistence.SESSION)
-    .then(() => firebase.auth().signInWithRedirect(provider));
+    .then(() => {
+      sessionStorage.setItem("is_logging_in", "true");
+      return firebase.auth().signInWithRedirect(provider);
+    });
 };
 
 export default loginUser;

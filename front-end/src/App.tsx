@@ -10,13 +10,13 @@ const App = () => {
 };
 
 const WrappedApp: React.FC = () => (
-  <UserContextProvider>
-    <AppContextProvider>
+  <AppContextProvider>
+    <UserContextProvider>
       <Layout>
         <App />
       </Layout>
-    </AppContextProvider>
-  </UserContextProvider>
+    </UserContextProvider>
+  </AppContextProvider>
 );
 
 export default WrappedApp;
