@@ -1,4 +1,4 @@
-import { Typography, Input, Tag } from "antd";
+import { Typography, Input, Tag, Button } from "antd";
 import Title from "antd/lib/typography/Title";
 import React, { useState, ChangeEvent, useContext } from "react";
 
@@ -50,23 +50,32 @@ const AddSignatures: React.FC<Props> = () => {
         Wklej poniżej skopiowane dane i sprawdź czy wszystko się zgadza.
         Aplikacja wyświetli wszystkie znalezione sygnatury i numery grup.
       </Typography.Paragraph>
-      <Input.TextArea
-        placeholder="Wklej dane tutaj"
-        className="lectures-input"
-        onChange={handleExtractSignatures}
-        rows={1}
-      />
+      {inputLectures.length === 0 && (
+        <Input.TextArea
+          placeholder="Wklej dane tutaj"
+          className="lectures-input"
+          onChange={handleExtractSignatures}
+          rows={1}
+        />
+      )}
       {inputLectures.length !== 0 && (
-        <div style={{ margin: "1em 0" }}>
-          <Typography.Title level={4}>Znalezione przedmioty:</Typography.Title>
-          {inputLectures.map(item => (
-            <Tag>
-              <b>Sygnatura: </b>
-              {item.signature} <b>Grupa: </b>
-              {item.group}
-            </Tag>
-          ))}
-        </div>
+        <>
+          <Button onClick={e => setInputLectures([])}>
+            Wyczyść wyszukiwanie
+          </Button>
+          <div style={{ margin: "1em 0" }}>
+            <Typography.Title level={4}>
+              Znalezione przedmioty:
+            </Typography.Title>
+            {inputLectures.map(item => (
+              <Tag>
+                <b>Sygnatura: </b>
+                {item.signature} <b>Grupa: </b>
+                {item.group}
+              </Tag>
+            ))}
+          </div>
+        </>
       )}
       <BackButton>Wstecz</BackButton>
       {user ? (
