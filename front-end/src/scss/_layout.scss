@@ -1,7 +1,10 @@
 .app {
   display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
 }
 
 .app-panel {
@@ -9,32 +12,87 @@
   justify-content: center;
   align-items: center;
 
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 20px;
 
   background-color: $primary;
 
   transition: transform ease 0.3s;
   will-change: transform;
+
+  > div {
+    margin: auto 0;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 14px;
+      height: 18px;
+      border: 4px solid rgba(0, 0, 0, 0);
+      border-width: 0 0 0 8px;
+      background-clip: padding-box;
+      background-color: rgba($color: $primary--dark, $alpha: 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 6px;
+      border: 4px solid rgba(0, 0, 0, 0);
+      border-width: 0 0 0 8px;
+      background-clip: padding-box;
+      background-color: rgba($color: $primary--dark, $alpha: 0.5);
+      box-shadow: inset -1px -1px 0px rgba($color: $primary--dark, $alpha: 0.3),
+        inset 1px 1px 0px rgba($color: $primary--dark, $alpha: 0.3);
+    }
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+      display: none;
+    }
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+  }
 }
 
 .user-panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 5;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100vw;
+  max-width: 400px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 20px;
 
   background-color: #fff;
 
   transition: transform ease 0.3s;
   will-change: transform;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: auto 0;
+    overflow-y: auto;
+
+    text-align: center;
+  }
+}
+
+.user-panel-button {
+  display: none;
 }
 
 .wrapper {
   max-width: 600px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .app {
     &[data-menu-open="true"] {
       .app-panel {
@@ -51,37 +109,7 @@
     flex-direction: column;
     justify-content: center;
 
-    > div {
-      margin: auto 0;
-      overflow-y: auto;
-
-      &::-webkit-scrollbar {
-        width: 14px;
-        height: 18px;
-        border: 4px solid rgba(0, 0, 0, 0);
-        border-width: 0 0 0 8px;
-        background-clip: padding-box;
-        background-color: rgba($color: $primary--dark, $alpha: 0.3);
-      }
-      &::-webkit-scrollbar-thumb {
-        height: 6px;
-        border: 4px solid rgba(0, 0, 0, 0);
-        border-width: 0 0 0 8px;
-        background-clip: padding-box;
-        background-color: rgba($color: $primary--dark, $alpha: 0.5);
-        box-shadow: inset -1px -1px 0px
-            rgba($color: $primary--dark, $alpha: 0.3),
-          inset 1px 1px 0px rgba($color: $primary--dark, $alpha: 0.3);
-      }
-      &::-webkit-scrollbar-button {
-        width: 0;
-        height: 0;
-        display: none;
-      }
-      &::-webkit-scrollbar-corner {
-        background-color: transparent;
-      }
-    }
+    width: 100vw;
   }
 
   .user-panel {
@@ -89,26 +117,9 @@
     top: 0;
     right: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    max-width: unset;
 
     transform: translateX(100%);
-
-    > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-
-      margin: auto 0;
-      overflow-y: auto;
-
-      text-align: center;
-    }
   }
 
   .user-panel-button {
@@ -116,6 +127,7 @@
     flex-shrink: 0;
 
     width: 100%;
+    max-width: 400px;
     padding: 10px;
     margin-top: 20px;
 
@@ -127,5 +139,9 @@
     background-color: #fff;
 
     font-weight: bold;
+  }
+
+  .wrapper {
+    max-width: 500px;
   }
 }
